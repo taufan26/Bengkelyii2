@@ -11,35 +11,56 @@ use yii\captcha\Captcha;
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
+     <div id="contact-page" class="container">
+        <div class="bg">
+            <div class="row">           
+                <div class="col-sm-12">                         
+                    <h2 class="title text-center">Hubungi <strong>Kami</strong></h2>
+                    <div id="gmap" class="contact-map">
+                                    <div class="row">   
+                <div class="col-sm-8">
+                    <div class="contact-form">
+                        <div class="status alert alert-success" style="display: none"></div>
 
-    <p>
-        If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
-    </p>
+                        <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+                        <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
 
-                <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+                        <?= $form->field($model, 'email') ?>
 
-                <?= $form->field($model, 'email') ?>
+                        <?= $form->field($model, 'subject') ?>
 
-                <?= $form->field($model, 'subject') ?>
+                        <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
-                <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+                        <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                            'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+                        ])?>
 
-                <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                    'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                ]) ?>
+                        <div class="form-group">
+                            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        </div>
 
-                <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        <?php ActiveForm::end(); ?>
+                    </div>
                 </div>
+                <div class="col-sm-4">
+                    <div class="contact-info">
+                        <h2 class="title text-center">Info Kontak</h2>
+                        <address>
+                            <p>Bengkel Master Inc.</p>
+                            <p>Lohbener no 10, Indramayu, 45252</p>
+                            <p>Indramyu, Jawa Barat, Indonesia</p>
+                            <p>Mobile: +628987737688</p>
+                            <p>Fax: (021) 3851193, 34830261,3846430</p>
+                            <p>Email: bengkelmaster@gmail.com</p>
+                        </address>
+                    </div>
+                </div> 
+            </div>
+        </div>                  
+    </div>                   
+</div>  
+</div> 
+ </div>
 
-            <?php ActiveForm::end(); ?>
-        </div>
-    </div>
-
-</div>
+    
