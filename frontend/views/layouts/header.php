@@ -25,10 +25,12 @@ use common\widgets\Alert;
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Booking Online', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Beli Sparepart', 'url' => ['/site/login']];
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         $menuItems[] = ['label' => 'Booking Online', 'url' => ['/site/booking']];
+        $menuItems[] = ['label' => 'Beli Sparepart', 'url' => ['/site/sparepart']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(

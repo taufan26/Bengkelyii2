@@ -14,6 +14,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use backend\models\Barang;
+use yii\data\ActiveDataProvider;
 
 /**
  * Site controller
@@ -74,7 +76,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $barang = new ActiveDataProvider(['query'=>Barang::find()->where(['id_barang'])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>3,
+    ]
+    ]);
+       return $this->render('index', ['barang'=>$barang]);
     }
 
     /**
@@ -148,6 +153,14 @@ class SiteController extends Controller
     public function actionService()
     {
         return $this->render('service');
+    }
+    public function actionBooking()
+    {
+        return $this->render('booking');
+    }
+    public function actionSparepart()
+    {
+        return $this->render('sparepart');
     }
 
     /**
