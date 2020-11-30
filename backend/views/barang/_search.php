@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id_barang') ?>
+    <?= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'nama') ?>
 
@@ -34,6 +34,8 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'kondisi_barang') ?>
 
     <?php // echo $form->field($model, 'image') ?>
+
+    <?php // echo $form->field($model, 'status') ?>
 
     <?php // echo $form->field($model, 'create_at') ?>
 

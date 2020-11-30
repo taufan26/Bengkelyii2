@@ -76,10 +76,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $barang = new ActiveDataProvider(['query'=>Barang::find()->where(['id_barang'])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>3,
-    ]
-    ]);
-       return $this->render('index', ['barang'=>$barang]);
+       return $this->render('index');
     }
 
     /**

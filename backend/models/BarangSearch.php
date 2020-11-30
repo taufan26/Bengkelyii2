@@ -4,10 +4,10 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Barang;
+use app\models\Barang;
 
 /**
- * BarangSearch represents the model behind the search form of `backend\models\Barang`.
+ * BarangSearch represents the model behind the search form of `app\models\Barang`.
  */
 class BarangSearch extends Barang
 {
@@ -17,8 +17,8 @@ class BarangSearch extends Barang
     public function rules()
     {
         return [
-            [['id_barang', 'quantity', 'harga', 'stock'], 'integer'],
-            [['nama', 'deskripsi', 'merek', 'model', 'kondisi_barang', 'image', 'create_at'], 'safe'],
+            [['id', 'quantity', 'stock', 'status'], 'integer'],
+            [['nama', 'deskripsi', 'harga', 'merek', 'model', 'kondisi_barang', 'image', 'create_at'], 'safe'],
         ];
     }
 
@@ -58,15 +58,16 @@ class BarangSearch extends Barang
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id_barang' => $this->id_barang,
+            'id' => $this->id,
             'quantity' => $this->quantity,
-            'harga' => $this->harga,
             'stock' => $this->stock,
+            'status' => $this->status,
             'create_at' => $this->create_at,
         ]);
 
         $query->andFilterWhere(['like', 'nama', $this->nama])
             ->andFilterWhere(['like', 'deskripsi', $this->deskripsi])
+            ->andFilterWhere(['like', 'harga', $this->harga])
             ->andFilterWhere(['like', 'merek', $this->merek])
             ->andFilterWhere(['like', 'model', $this->model])
             ->andFilterWhere(['like', 'kondisi_barang', $this->kondisi_barang])

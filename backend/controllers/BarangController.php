@@ -3,7 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Barang;
+use app\models\Barang;
 use backend\models\BarangSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -75,8 +75,9 @@ class BarangController extends Controller
             }
             $model->image = $imageFile->baseName.'.'.$imageFile->extension;
             $model->save(false);
-            return $this->redirect(['view', 'id' => $model->id_barang]);
+            return $this->redirect(['view', 'id' => $model->id]);
         }
+
         return $this->render('create', [
             'model' => $model,
         ]);
@@ -94,7 +95,7 @@ class BarangController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_barang]);
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [

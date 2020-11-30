@@ -11,17 +11,16 @@ $this->title = 'Sparepart';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="barang-index">
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            //['class' => 'yii\grid\SerialColumn'],
-
-            //'id_barang',
+            'id',
             'nama',
-            'deskripsi',
+            'deskripsi:ntext',
             'quantity',
             'harga',
             'stock',
@@ -29,14 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'model',
             //'kondisi_barang',
             //'image',
+            //'status',
             //'create_at',
 
-              ['class' => 'yii\grid\ActionColumn',
-
-                          'template'=>'{view} {update} {delete}',
-                          'header'=>'Action Colomn'
-                      ],
-
+            ['class' => 'yii\grid\ActionColumn','header'=>'Action Colomn'],
         ],
     ]); ?>
 

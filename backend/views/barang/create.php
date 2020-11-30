@@ -3,9 +3,9 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Barang */
+/* @var $model app\models\Barang */
 
-$this->title = 'Tambah Barang';
+$this->title = 'Tambah Sparepart';
 $this->params['breadcrumbs'][] = ['label' => 'Sparepart', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Barang */
+/* @var $model app\models\Barang */
 
 $this->title = $model->nama;
 $this->params['breadcrumbs'][] = ['label' => 'Sparepart', 'url' => ['index']];
@@ -14,8 +14,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="barang-view">
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id_barang], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id_barang], [
+        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -27,9 +27,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id_barang',
+            'id',
             'nama',
-            'deskripsi',
+            'deskripsi:ntext',
             'quantity',
             'harga',
             'stock',
@@ -37,6 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'model',
             'kondisi_barang',
             'image',
+            'status',
             'create_at',
         ],
     ]) ?>
