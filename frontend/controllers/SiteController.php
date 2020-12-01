@@ -157,7 +157,19 @@ class SiteController extends Controller
     }
     public function actionSparepart()
     {
-        return $this->render('sparepart');
+        //$products = Products::find()->where(['status'=>1])->all();
+        $barang = new ActiveDataProvider(['query'=>Barang::find()->where(['status'=>1])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>3,
+    ]
+    ]);
+
+    $barangMerek1 = new ActiveDataProvider(['query'=>Barang::find()->where(['merek'=>'Toyota'])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>4,
+    ]
+    ]);
+    $barangMerek2 = new ActiveDataProvider(['query'=>Barang::find()->where(['merek'=>'Honda'])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>4,
+    ]
+    ]);
+
+        return $this->render('sparepart', ['barang'=>$barang, 'barangMerek1'=>$barangMerek1, 'barangMerek2' =>$barangMerek2 ]);
     }
 
     /**

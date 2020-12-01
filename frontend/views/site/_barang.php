@@ -5,14 +5,14 @@ use yii\helpers\Url;
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                         <div class="productinfo text-center">
-                                            <img src="" alt="" />
-                                            <h2>RP<?=$model->harga?></h2>
+                                            <img height="250px" src="../../backend/web/uploads/<?=$model->image?>"/>
+                                            <h2>RP.<?=$model->harga?></h2>
                                             <p><?=$model->nama?></p>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
-                                                <h2>RP<?=$model->harga?></h2>
+                                                <h2>RP.<?=$model->harga?></h2>
                                                 <p><?=$model->nama?><br><?=$model->deskripsi?></p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>

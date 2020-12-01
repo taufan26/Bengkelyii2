@@ -3,7 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
-use app\models\Barang;
+use backend\models\Barang;
 use backend\models\BarangSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
