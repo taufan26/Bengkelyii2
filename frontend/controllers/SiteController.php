@@ -158,7 +158,7 @@ class SiteController extends Controller
     public function actionSparepart()
     {
         //$products = Products::find()->where(['status'=>1])->all();
-        $barang = new ActiveDataProvider(['query'=>Barang::find()->where(['status'=>1])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>3,
+        $barang = new ActiveDataProvider(['query'=>Barang::find()->where(['status'=>1])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>6,
     ]
     ]);
 

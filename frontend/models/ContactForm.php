@@ -4,16 +4,17 @@ namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
+use yii\db\ActiveRecord;
 
 /**
  * ContactForm is the model behind the contact form.
  */
-class ContactForm extends Model
+class ContactForm extends ActiveRecord
 {
-    public $name;
-    public $email;
-    public $subject;
-    public $body;
+    //public $name;
+    //public $email;
+    //public $subject;
+    //public $body;
     public $verifyCode;
 
 
@@ -50,6 +51,13 @@ class ContactForm extends Model
      */
     public function sendEmail($email)
     {
+        $model = new ContactForm();
+        $model->name = $this->name;
+        $model->email = $this->email;
+        $model->subject = $this->subject;
+        $model->body = $this->body;
+        $model->save(false);
+
         return Yii::$app->mailer->compose()
             ->setTo($email)
             ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])

@@ -28,9 +28,8 @@
                     [
                         'label' => 'Booking online',
                         'items' => [
-                            ['label' => 'Lihat Antrian', 'iconStyle' => 'far'],
-                            ['label' => 'Konfirmasi Antrian', 'iconStyle' => 'far'],
-                            ['label' => 'Tabah/Hapus Antrian', 'iconStyle' => 'far'],
+                            ['label' => 'List Booking', 'url' => ['/booking/index'], 'iconStyle' => 'far'],
+                            ['label' => 'Konfirmasi booking', 'iconStyle' => 'far'],
                         ]
                     ],
                     [
@@ -38,9 +37,10 @@
                         'items' => [
                             ['label' => 'List Sparepart', 'url' => ['/barang/index'], 'iconStyle' => 'far'],
                             ['label' => 'Tambah Sparepart', 'url' => ['/barang/create'], 'iconStyle' => 'far'],
-                            ['label' => 'Sparepart', 'iconStyle' => 'far'],
+                            ['label' => 'Konfirmasi Pembayaran', 'iconStyle' => 'far', ],
                         ]
                     ],
+                    ['label' => 'Complaint & Feedback', 'iconStyle' => 'far','url' => ['contact/index']],
                     ['label' => 'Yii2 PROVIDED', 'header' => true],
                     ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],
                     ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
