@@ -66,7 +66,12 @@ class BookingController extends Controller
     {
         $model = new Booking();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+
+            $model->email = Yii::$app->user->identity->email;
+            $model->nama= Yii::$app->user->identity->username;
+            $model->save(false);
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

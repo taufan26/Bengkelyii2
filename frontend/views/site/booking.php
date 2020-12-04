@@ -34,7 +34,7 @@ use yii\grid\GridView;
 							<div class="caption" align="center">
 								<h3 style="text-align: center;color:white"> Ganti Ban</h3>
 								<input type="hidden" name="service_id" value="2">
-								<?= Html::a('Booking', ['create'], ['class' => 'btn btn-success']) ?>
+								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
 							</div>
 						
 				</div>
@@ -51,7 +51,7 @@ use yii\grid\GridView;
 							<div class="caption" align="center">
 								<h3 style="text-align: center;color:white"> Ganti Oli & Rem</h3>
 								<input type="hidden" name="service_id" value="3">
-								<?= Html::a('Booking', ['create'], ['class' => 'btn btn-success']) ?>
+								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
 							</div>
 						
 				</div>
@@ -69,7 +69,7 @@ use yii\grid\GridView;
 							<div class="caption" align="center">
 								<h3 style="text-align: center;color:white"> Ganti Aki Baterai</h3>
 								<input type="hidden" name="service_id" value="4">
-								<?= Html::a('Booking', ['create'], ['class' => 'btn btn-success']) ?>
+								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
 							</div>
 						
 				</div>
@@ -86,7 +86,7 @@ use yii\grid\GridView;
 							<div class="caption" align="center">
 								<h3 style="text-align: center;color:white"> Derek Servis</h3>
 								<input type="hidden" name="service_id" value="5">
-								<?= Html::a('Booking', ['create'], ['class' => 'btn btn-success']) ?>
+								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
 							</div>
 						
 				</div>
@@ -103,7 +103,7 @@ use yii\grid\GridView;
 							<div class="caption" align="center">
 								<h3 style="text-align: center;color:white"> Servis Lainnya</h3>
 								<input type="hidden" name="service_id" value="6">
-								<?= Html::a('Booking', ['create'], ['class' => 'btn btn-success']) ?>
+								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
 							</div>
 						
 				</div>
