@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 ?>
-<div class="container-fluid" style="background-color: #ccccb3" >
+<div class="container-fluid" style="background-color: #ECF0F1" >
 	
 <div class="container">
 	<center><h1>BOOKING</h1></center>

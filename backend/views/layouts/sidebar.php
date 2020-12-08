@@ -40,6 +40,7 @@
                             ['label' => 'Konfirmasi Pembayaran', 'iconStyle' => 'far', ],
                         ]
                     ],
+                    ['label' => 'User', 'iconStyle' => 'far','url' => ['user/index']],
                     ['label' => 'Complaint & Feedback', 'iconStyle' => 'far','url' => ['contact/index']],
                     ['label' => 'Yii2 PROVIDED', 'header' => true],
                     ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],

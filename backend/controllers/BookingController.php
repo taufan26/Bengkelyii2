@@ -28,7 +28,7 @@ class BookingController extends Controller
             ],
         ];
     }
-
+    
     /**
      * Lists all Booking models.
      * @return mixed

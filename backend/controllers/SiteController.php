@@ -6,6 +6,9 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use backend\models\Booking;
+use backend\models\Barang;
+use yii\data\ActiveDataProvider;
 
 /**
  * Site controller
@@ -60,7 +63,25 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $booking['cms'] = Booking::find()->count();
+        $barang['brg'] = Barang::find()->count();
+        $model['mdl'] = (new \yii\db\Query())
+        ->select(['id'])
+        ->from('user')
+        ->count();
+        $mail['mal'] = (new \yii\db\Query())
+        ->select(['id'])
+        ->from('contact_form')
+        ->count();
+
+         $bookingList = new ActiveDataProvider(['query'=>Booking::find()->from(['booking'])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>3,
+    ]
+    ]);
+         $barangList = new ActiveDataProvider(['query'=>Barang::find()->where(['status'=>1])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>3,
+    ]
+    ]);
+
+        return $this->render('index', ['booking'=>$booking, 'barang'=>$barang, 'model'=>$model, 'mail'=>$mail, 'bookingList'=>$bookingList, 'barangList'=>$barangList]);
     }
 
     /**

@@ -4,6 +4,7 @@
 
 $this->title = 'Bengkel Master';
 ?>
+
 <div class="site-index">
     <img src="images/banner-main-page.jpg" style="width: 1140px;height: 500px;">
     <div class="container-fluid">
@@ -43,7 +44,7 @@ $this->title = 'Bengkel Master';
                 </a>
             </div>
         </div>
-        <div style="background-color: #ebebe0;">
+        <div style="background-color: #ECF0F1;">
             <div class="container" style="margin-top: 50px;">
                 <center><h2 style="margin-top: 50px;">MENAWARKAN SOLUSI TERBAIK UNTUK MOBIL ANDA.</h2></center>
             </div>

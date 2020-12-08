@@ -11,6 +11,7 @@ use common\widgets\Alert;
             <div class="col-md-12">
                 <img src="images/main-logo.png" style="height: 70px; display: inline-block; margin-left:20px; float:left">  
                 <h3 style="color: black;"><b>BENGKEL MASTER</b></h3>
+                <br>
                  <?php
     NavBar::begin([
         'options' => [
@@ -31,10 +32,11 @@ use common\widgets\Alert;
     } else {
         $menuItems[] = ['label' => 'Booking Online', 'url' => ['/site/booking']];
         $menuItems[] = ['label' => 'Beli Sparepart', 'url' => ['/site/sparepart']];
+        $menuItems[] = ['label' => 'Profile(' . Yii::$app->user->identity->username . ')', 'url' => ['/profile/index']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'Logout',
                 ['class' => 'btn btn-link logout']
             )
             . Html::endForm()
