@@ -14,7 +14,7 @@ use Yii;
  * @property string $harga
  * @property int $stock
  * @property string $merek
- * @property string $model
+ * @property string $model 
  * @property string $kondisi_barang
  * @property string $image
  * @property int $status

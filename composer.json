@@ -23,7 +23,8 @@
         "rmrevin/yii2-fontawesome": "~3.5",
         "kartik-v/yii2-widget-datepicker": "dev-master",
         "yiisoft/yii2-jui": "~2.0.0",
-        "kartik-v/yii2-widget-timepicker": "dev-master"
+        "kartik-v/yii2-widget-timepicker": "dev-master",
+        "shintio/yii2-profile": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

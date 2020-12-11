@@ -5,7 +5,7 @@ namespace frontend\models;
 use Yii;
 
 /**
- * This is the model class for table "booking".
+ * This is the model class for table "booking". 
  *
  * @property int $id
  * @property string $nama

@@ -16,7 +16,8 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use backend\models\Barang;
 use yii\data\ActiveDataProvider;
-
+use yii\helpers\Url;
+use frontend\models\Profile;
 /**
  * Site controller
  */
@@ -181,7 +182,7 @@ class SiteController extends Controller
     {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
-            Yii::$app->session->setFlash('success', 'Thank you for registration. Please check your inbox for verification email.');
+            Yii::$app->session->setFlash('success', 'Silakan Melengkapi Data Diri');
             return $this->goHome();
         }
 
