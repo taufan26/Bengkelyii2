@@ -11,7 +11,7 @@ use yii\captcha\Captcha;
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-     <div id="contact-page" class="container-fluid">
+     <div id="contact-page" class="container-fluid" style="background-color: #FFFFFF">
         <div class="bg">
             <div class="row">           
                 <div class="col-sm-12">                         

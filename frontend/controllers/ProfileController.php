@@ -45,6 +45,11 @@ class ProfileController extends Controller
 
         $tentangSaya = new ActiveDataProvider(['query'=>Profile::find()->where(['username' => Yii::$app->user->identity->username])]);
 
+        if(empty($tentangSaya->totalCount > 0))
+        {
+               $this->redirect(array('/profile/create'));
+        }
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -142,8 +147,4 @@ class ProfileController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-
-    
-
-     
 }

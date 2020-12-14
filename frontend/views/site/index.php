@@ -5,7 +5,7 @@
 $this->title = 'Bengkel Master';
 ?>
 
-<div class="site-index">
+<div class="site-index" style="background-color: #FFFFFF">
     <img src="images/banner-main-page.jpg" style="width: 1140px;height: 500px;">
     <div class="container-fluid">
         <div class="row" style="background-color: #B22222;color: white;">

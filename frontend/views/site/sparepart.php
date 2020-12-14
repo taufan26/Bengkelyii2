@@ -3,7 +3,7 @@ use yii\helpers\Url;
 use yii\widgets\LinkPager;
  ?>
 
-    <section id="slider"><!--slider-->
+    <section id="slider" style="background-color: #FFFFFF"><!--slider-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">

@@ -13,7 +13,7 @@ use yii\helpers\Url;
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-color: #FFFFFF">
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -33,7 +33,7 @@ use yii\helpers\Url;
                 <ul class="nav nav-pills">
                   <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Booking</a></li>
                   <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">History Shop</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Edit Profile</a></li>
                 </ul>
               </div><!-- /.card-header -->
               <div class="card-body">
@@ -79,6 +79,14 @@ use yii\helpers\Url;
                   <!-- /.tab-pane -->
 
                   <div class="tab-pane" id="settings">
+                    <?php
+                                  echo \yii\widgets\ListView::Widget([
+                                    'dataProvider'=>$tentangSaya,
+                                    'layout'=> "<div class\"items\">{items}</div>",
+                                    //'intemOptions'=>['class'=>'item'],
+                                    'itemView'=>'_profile',
+                                  ])
+                    ?>
                   </div>
                   <!-- /.tab-pane -->
                 </div>

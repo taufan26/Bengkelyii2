@@ -30,8 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'alamat',
             'note:ntext',
             'img_profile',
-            'create_at',
+            //'create_at',
         ],
     ]) ?>
-
 </div>

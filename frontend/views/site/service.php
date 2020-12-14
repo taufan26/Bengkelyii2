@@ -8,11 +8,11 @@ $this->title = 'Service';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div>
+<div style="background-color: #FFFFFF">
 		<center><h1 style="margin-top: 100px;">LAYANAN MANA YANG ANDA BUTUHKAN?</h1></center>
 		<center><h4 style="margin-top: 50px;">Setiap jenis layanan akan kami berikan untuk Anda.<br> Sebutkan saja jenis layanan mobil <br> yang Anda inginkan saat memesan.<br> Layanan itu akan kami berikan untuk Anda.</h4></center>
 	</div>
-	<div class="container">
+	<div class="container" style="background-color: #FFFFFF">
 		<div class="row">
 			<div class="col-md-4">
 				<center>
