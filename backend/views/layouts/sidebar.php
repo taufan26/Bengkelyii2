@@ -29,7 +29,7 @@
                         'label' => 'Booking online',
                         'items' => [
                             ['label' => 'List Booking', 'url' => ['/booking/index'], 'iconStyle' => 'far'],
-                            ['label' => 'Konfirmasi booking', 'iconStyle' => 'far'],
+                            ['label' => 'Konfirmasi booking', 'url' => ['/booking/konfirmasi'], 'iconStyle' => 'far'],
                         ]
                     ],
                     [

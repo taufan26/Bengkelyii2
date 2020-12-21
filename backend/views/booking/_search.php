@@ -25,6 +25,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'service_name') ?>
 
+    <?= $form->field($model, 'status') ?>
+
     <?php // echo $form->field($model, 'jam') ?>
 
     <?php // echo $form->field($model, 'create_at') ?>

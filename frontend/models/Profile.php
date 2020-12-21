@@ -57,20 +57,20 @@ class Profile extends \yii\db\ActiveRecord
             'jenis_kelamin' => 'Jenis Kelamin',
             'alamat' => 'Alamat',
             'note' => 'Note',
-            'img_profile' => 'Img Profile',
+            'img_profile' => 'Image Profile',
             'create_at' => 'Create At',
         ];
     }
     
     public function getTanggal()
     {
-        if ($this->tanggal != '') {
-            return date('d-m-Y', strtotime($this->tanggal));
+        if ($this->tanggal_lahir != '') {
+            return date('d-m-Y', strtotime($this->tanggal_lahir));
         }
     }
 
     public function setTanggal($value)
     {
-        $this->tanggal = Date('Y-m-d', strtotime($value));
+        $this->tanggal_lahir = Date('Y-m-d', strtotime($value));
     }
 }

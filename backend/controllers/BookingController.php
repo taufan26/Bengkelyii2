@@ -8,6 +8,7 @@ use backend\models\BookingSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\data\ActiveDataProvider;
 
 /**
  * BookingController implements the CRUD actions for Booking model.
@@ -123,5 +124,26 @@ class BookingController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionKonfirmasi()
+    {
+        $bookingList = new ActiveDataProvider(['query'=>Booking::find()->from(['booking'])->orderBy('create_at DESC') 
+    ]);
+
+        return $this->render('konfirmasi', ['bookingList'=>$bookingList,]);
+    }
+
+    public function actionUkonfirmasi($id)
+    {
+         $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
+
+        return $this->render('ukonfirmasi', [
+            'model' => $model,
+        ]);
     }
 }

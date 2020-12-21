@@ -36,12 +36,12 @@ class ProfileController extends Controller
      * Lists all Profile models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex() 
     {
         $searchModel = new ProfileSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        $listBooking = new ActiveDataProvider(['query'=>Booking::find()->from('booking')->where(['nama' => Yii::$app->user->identity->username])]);
+        $listBooking = new ActiveDataProvider(['query'=>Booking::find()->from('booking')->where(['nama' => Yii::$app->user->identity->username])->orderBy('create_at DESC')]);
 
         $tentangSaya = new ActiveDataProvider(['query'=>Profile::find()->where(['username' => Yii::$app->user->identity->username])]);
 

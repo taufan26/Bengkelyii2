@@ -53,6 +53,7 @@ use yii\helpers\Url;
                               <th>Nama Service</th>
                               <th>Tanggal Service</th>
                               <th>Jam Service</th>
+                              <th>Status</th>
                             </tr>
                             </thead>
                             <tbody>

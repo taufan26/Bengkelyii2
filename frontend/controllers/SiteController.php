@@ -23,6 +23,7 @@ use frontend\models\Profile;
  */
 class SiteController extends Controller
 {
+    public $enableCsrfValidation = false;
     /**
      * {@inheritdoc}
      */
@@ -171,6 +172,17 @@ class SiteController extends Controller
     ]);
 
         return $this->render('sparepart', ['barang'=>$barang, 'barangMerek1'=>$barangMerek1, 'barangMerek2' =>$barangMerek2 ]);
+    }
+
+    public function actionCart()
+    {
+        $session = Yii::$app->session;
+        if (isset($_POST['pid'])) {
+            $pid = $_POST['pid'];
+            $session['cart'] = $pid;
+        }
+        $carts = Barang::find()->where(['id'=>$session['cart']])->all();
+        return $this->render('cart', ['carts'=>$carts]);
     }
 
     /**

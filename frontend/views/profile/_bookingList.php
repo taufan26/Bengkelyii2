@@ -7,4 +7,5 @@
     	<td>
     	<div class="sparkbar" data-color="#00a65a" data-height="20"><?=$model->jam?></div>
     </td>
+    <td><span class="badge badge-info"><?=$model->status?></span></td>
 </tr> 

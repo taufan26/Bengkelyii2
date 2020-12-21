@@ -8,13 +8,23 @@ use yii\helpers\Url;
                                             <img height="250px" src="../../backend/web/uploads/<?=$model->image?>"/>
                                             <h2>RP.<?=$model->harga?></h2>
                                             <p><?=$model->nama?></p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+
+                                            <form action="<?=Url::to(['/site/cart'])?>" method="post">
+                                                <input type="text" name="pid" value="<?=$model->id?>">
+                                                <button class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                            </form>
+
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
                                                 <h2>RP.<?=$model->harga?></h2>
                                                 <p><?=$model->nama?><br><?=$model->deskripsi?></p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+
+                                                <form action="<?=Url::to(['/site/cart'])?>" method="post">
+                                                    <input type="text" name="pid" value="<?=$model->id?>">
+                                                    <button class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                </form>
+
                                             </div>
                                         </div>
                                 </div>

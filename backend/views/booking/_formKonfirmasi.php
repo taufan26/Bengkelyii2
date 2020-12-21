@@ -15,17 +15,6 @@ use kartik\time\TimePicker;
 
     <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 
-    <?= $form->field($model, 'nama')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model,'tanggal')->input('date')?> 
-
-    <?= $form->field($model, 'service_name')->dropDownList(
-            ['Car Checks' => 'Car Checks', 'Ganti Ban' => 'Ganti Ban', 'Ganti Oli & Rem' => 'Ganti Oli & Rem', 'Ganti Aki Baterai'=>'Ganti Aki Baterai', 'Derek service' => 'Derek service', 'Service Lainnya' => 'Service Lainnya']) ?>
-
-    <?= $form->field($model, 'jam')->input('time') ?>
-
      <?= $form->field($model, 'status')->dropDownList(
             ['Menunggu Konfirmasi' => 'Menunggu Konfirmasi', 'Terkonfirmasi' => 'Terkonfirmasi', 'Di Tolak' => 'Di Tolak']) ?>
 

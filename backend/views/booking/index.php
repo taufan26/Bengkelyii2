@@ -29,6 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'tanggal',
             'service_name',
             'jam',
+            'status',
             //'create_at',
 
             ['class' => 'yii\grid\ActionColumn'],

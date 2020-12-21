@@ -32,8 +32,9 @@ class Booking extends \yii\db\ActiveRecord
     {
         return [
             [['nama', 'email', 'tanggal', 'service_name', 'jam'], 'required'],
-            [['tanggal', 'create_at'], 'safe'],
+            [['tanggal', 'create_at', 'status'], 'safe'],
             [['nama', 'email', 'service_name', 'jam'], 'string', 'max' => 100],
+            [['status'], 'string', 'max' => 50],
         ];
     }
 
@@ -49,6 +50,7 @@ class Booking extends \yii\db\ActiveRecord
             'tanggal' => 'Tanggal',
             'service_name' => 'Service Name',
             'jam' => 'Jam',
+            'status' => 'Status',
             'create_at' => 'Create At',
         ];
     }
