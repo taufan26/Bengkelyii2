@@ -177,10 +177,13 @@ class SiteController extends Controller
     public function actionCart()
     {
         $session = Yii::$app->session;
+        $session['cart'] = '';
+        $pid = $session['cart'];
         if (isset($_POST['pid'])) {
-            $pid = $_POST['pid'];
+            $pid[] = $_POST['pid'];
             $session['cart'] = $pid;
         }
+        print_r($session['cart']);
         $carts = Barang::find()->where(['id'=>$session['cart']])->all();
         return $this->render('cart', ['carts'=>$carts]);
     }

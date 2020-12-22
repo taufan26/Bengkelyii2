@@ -1,6 +1,8 @@
  <?php
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+
+$urll = Url::to(['site/cart']);
  ?>
 
  <div class="header-bottom"><!--header-bottom-->
@@ -18,7 +20,7 @@ use yii\widgets\LinkPager;
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
                                         <li><a href="checkout.html">Checkout</a></li> 
-                                        <li><a href="cart.html">Cart</a></li> 
+                                        <li><a href="<?=$urll?>">Cart</a></li> 
                             </ul>
                         </div>
                     </div>

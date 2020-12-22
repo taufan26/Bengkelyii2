@@ -1,3 +1,16 @@
+<p align="center">
+    <a href="https://github.com/yiisoft" target="_blank">
+        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
+    </a>
+    <h1 align="center">Yii2 Shopping Cart Extension</h1>
+    <br>
+</p>
+
+This bengkel app for Yii framework 2.0
+
+
+## Support us
+
 taufan26/bengkelyii2
 ======================
 bengkel yii2
@@ -41,11 +54,7 @@ edit config-local.php with your database
 ```
 
 ```
-yii migrate
-```
-
-```
-run app "http://localhost/advanced/frontend/web/"
+run app 
 ```
 
 

@@ -2,7 +2,7 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="#">Home</a></li>
+				  <li><a href="">Back</a></li>
 				  <li class="active">Shopping Cart</li>
 				</ol>
 			</div>
@@ -19,16 +19,17 @@
 						</tr>
 					</thead>
 					<tbody>
+						<?php foreach ($carts as $cart) { ?>
 						<tr>
 							<td class="cart_product">
-								<a href=""><img src="images/cart/one.png" alt=""></a>
+								<a href=""><img height="70px" src="../../backend/web/uploads/<?=$cart->image?>" alt=""/></a>
 							</td>
 							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
+								<h4><a href=""><?=$cart->nama?></a></h4>
+								<p><?=$cart->deskripsi?></p>
 							</td>
 							<td class="cart_price">
-								<p>$59</p>
+								<p>RP.<?=$cart->harga?></p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
@@ -38,12 +39,13 @@
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
+								<p class="cart_total_price">RP.<?=$cart->harga?></p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
+					<?php } ?>
 					</tbody>
 				</table>
 			</div>
