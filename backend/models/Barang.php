@@ -3,6 +3,8 @@
 namespace backend\models;
 
 use Yii;
+use \yz\shoppingcart\CartPositionTrait;
+use \yz\shoppingcart\CartPositionInterface;
 
 /**
  * This is the model class for table "barang".
@@ -20,7 +22,7 @@ use Yii;
  * @property int $status
  * @property string $create_at
  */
-class Barang extends \yii\db\ActiveRecord
+class Barang extends \yii\db\ActiveRecord implements CartPositionInterface
 {
     /**
      * {@inheritdoc}
@@ -66,5 +68,17 @@ class Barang extends \yii\db\ActiveRecord
             'status' => 'Status',
             'create_at' => 'Create At',
         ];
+    }
+    
+    use CartPositionTrait;
+
+    public function getPrice()
+    {
+        return $this->harga;
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 }

@@ -19,7 +19,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($carts as $cart) { ?>
+						<?php foreach ($data as $cart) { ?>
 						<tr>
 							<td class="cart_product">
 								<a href=""><img height="70px" src="../../backend/web/uploads/<?=$cart->image?>" alt=""/></a>

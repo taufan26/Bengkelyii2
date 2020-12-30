@@ -18,6 +18,9 @@ use backend\models\Barang;
 use yii\data\ActiveDataProvider;
 use yii\helpers\Url;
 use frontend\models\Profile;
+use \yz\shoppingcart\CartPositionTrait;
+use \yz\shoppingcart\CartPositionInterface;
+use \yz\shoppingcart\Shoppingcart;
 /**
  * Site controller
  */
@@ -174,18 +177,17 @@ class SiteController extends Controller
         return $this->render('sparepart', ['barang'=>$barang, 'barangMerek1'=>$barangMerek1, 'barangMerek2' =>$barangMerek2 ]);
     }
 
-    public function actionCart()
+    public function actionAddToCart($id)
     {
-        $session = Yii::$app->session;
-        $session['cart'] = '';
-        $pid = $session['cart'];
-        if (isset($_POST['pid'])) {
-            $pid[] = $_POST['pid'];
-            $session['cart'] = $pid;
+        $cart = Yii::$app->cart;
+
+        $model = Barang::findOne($id);
+        if ($model) {
+            $cart->put($model, 1);
+            $data=$cart->getPositions();
+            return $this->render('cart',['data'=>$data]);
         }
-        print_r($session['cart']);
-        $carts = Barang::find()->where(['id'=>$session['cart']])->all();
-        return $this->render('cart', ['carts'=>$carts]);
+        throw new NotFoundHttpException();
     }
 
     /**

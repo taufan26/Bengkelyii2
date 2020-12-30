@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use yii\helpers\Html;
  ?>
                         <div class="col-sm-4">
                             <div class="product-image-wrapper">
@@ -8,23 +9,15 @@ use yii\helpers\Url;
                                             <img height="250px" src="../../backend/web/uploads/<?=$model->image?>"/>
                                             <h2>RP.<?=$model->harga?></h2>
                                             <p><?=$model->nama?></p>
-
-                                            <form action="<?=Url::to(['/site/cart'])?>" method="post">
-                                                <input type="text" name="pid" value="<?=$model->id?>">
                                                 <button class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </form>
-
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
                                                 <h2>RP.<?=$model->harga?></h2>
                                                 <p><?=$model->nama?><br><?=$model->deskripsi?></p>
-
-                                                <form action="<?=Url::to(['/site/cart'])?>" method="post">
-                                                    <input type="text" name="pid" value="<?=$model->id?>">
-                                                    <button class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                                </form>
-
+                                                <a href="<?php echo \yii\helpers\Url::to(['/cart/add']) ?>" class="btn btn-primary btn-add-to-cart">
+                                                Add to Cart
+                                                </a>
                                             </div>
                                         </div>
                                 </div>
