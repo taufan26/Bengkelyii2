@@ -15,9 +15,7 @@ use yii\helpers\Html;
                                             <div class="overlay-content">
                                                 <h2>RP.<?=$model->harga?></h2>
                                                 <p><?=$model->nama?><br><?=$model->deskripsi?></p>
-                                                <a href="<?php echo \yii\helpers\Url::to(['/cart/add']) ?>" class="btn btn-primary btn-add-to-cart">
-                                                Add to Cart
-                                                </a>
+                                                <?=Html::a('Add to cart',['add-to-cart','id'=>$model->id], ['class'=>'btn btn-success']) ?>
                                             </div>
                                         </div>
                                 </div>
