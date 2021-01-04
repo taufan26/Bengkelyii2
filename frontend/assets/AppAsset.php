@@ -15,8 +15,7 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/bootstrap.min.css',
         'css/font-awesome.min.css',
-        'css/prettyPhoto.css',
-        'css/price-range.css',
+        'css/prettyPhoto.css', 
         'css/animate.css',
         'css/main.css',
         'css/responsive.css',
@@ -28,9 +27,9 @@ class AppAsset extends AssetBundle
         'js/html5shiv.js',
         'js/respond.min.js',
         'js/jquery.scrollUp.min.js',
-        'js/price-range.js',
         'js/jquery.prettyPhoto.js',
         'js/main.js',
+        'js/jquery.cslider.js'
 
     ];
     public $depends = [

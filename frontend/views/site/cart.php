@@ -1,3 +1,10 @@
+<?php
+use yii\helpers\html;
+
+$this->title='Cart';
+$this->params['breadcrumbs'][]=$this->title;
+?>
+
 <section id="cart_items">
 		<div class="container">
 			<div class="breadcrumbs">
@@ -44,10 +51,15 @@
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
 							</td>
+							<br>
 						</tr>
 					<?php } ?>
 					</tbody>
+
 				</table>
+				<div style="text-align:right; float:right; width:50%;">
+				<?=Html::a('Checkout',['checkout'], ['class'=>'btn btn-success']) ?>
+				</div>
 			</div>
 		</div>
 	</section> <!--/#cart_items--> 
