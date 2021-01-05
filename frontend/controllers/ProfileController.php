@@ -109,7 +109,13 @@ class ProfileController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $imageUpdate = UploadedFile::getInstance($model,'img_profile');
+            if (isset($imageUpdate->size)) {
+                $imageUpdate->saveAs('uploads/'.$imageUpdate->baseName.'.'.$imageUpdate->extension);
+            }
+            $model->img_profile = $imageUpdate->baseName.'.'.$imageUpdate->extension;
+            $model->save(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

@@ -19,15 +19,15 @@ use kartik\time\TimePicker;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model,'tanggal')->input('date')?> 
-
     <?= $form->field($model, 'service_name')->dropDownList(
             ['Car Checks' => 'Car Checks', 'Ganti Ban' => 'Ganti Ban', 'Ganti Oli & Rem' => 'Ganti Oli & Rem', 'Ganti Aki Baterai'=>'Ganti Aki Baterai', 'Derek service' => 'Derek service', 'Service Lainnya' => 'Service Lainnya']) ?>
-
-    <?= $form->field($model, 'jam')->input('time') ?>
-
      <?= $form->field($model, 'status')->dropDownList(
             ['Menunggu Konfirmasi' => 'Menunggu Konfirmasi', 'Terkonfirmasi' => 'Terkonfirmasi', 'Di Tolak' => 'Di Tolak']) ?>
+    <div class="col-lg-3 col-6">
+    <?= $form->field($model,'tanggal')->input('date')?>
+
+    <?= $form->field($model, 'jam')->input('time') ?>
+    </div> 
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

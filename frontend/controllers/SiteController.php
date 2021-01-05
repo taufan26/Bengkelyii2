@@ -190,6 +190,24 @@ class SiteController extends Controller
         throw new NotFoundHttpException();
     }
 
+    public function actionCheckOut()
+    {
+        $cart = new Shoppingcart();
+        $morder= new Orders();
+        $cusid=User::find()->where(['id'=>Yii::$app->user->identity->id])->none();
+        $morder->date=date('Y-m-d H:i:s');
+        $morder->customer_id=$cusid->id;
+        $morder->save();
+        foreach ($cart->getPositions() as $data) {
+            $mdetorder = new OrdersItem();
+            $mdetorder->order_id = $morder->id;
+            $mdetorder->item_id = $data->id;
+            $mdetorder->save();
+        }
+        $cart->removeAll();
+        return $this->redirect(['history']);
+    }
+
     /**
      * Signs user up.
      *

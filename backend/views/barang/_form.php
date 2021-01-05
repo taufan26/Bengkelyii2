@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\file\FileInput;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Barang */
@@ -28,7 +29,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'kondisi_barang')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'image')->fileInput() ?>
+     <?= $form->field($model, 'image')->widget(FileInput::classname(), [
+    'options' => ['accept' => 'image/*'], 
+    ]);?>
 
     <?= $form->field($model, 'status')->dropDownList([1=>'active', 0=>'inactive']) ?>
 

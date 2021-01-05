@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "868013cb1c58ce5c696d7c6bc1a89056",
+    "content-hash": "c3247a9d0f2f80335c93d8ea9e7d908d",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -96,7 +96,7 @@
             "version": "3.5.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "dist": {
@@ -312,16 +312,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.24",
+            "version": "2.1.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "ca90a3291eee1538cd48ff25163240695bd95448"
+                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/ca90a3291eee1538cd48ff25163240695bd95448",
-                "reference": "ca90a3291eee1538cd48ff25163240695bd95448",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/0dbf5d78455d4d6a41d186da50adc1122ec066f4",
+                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4",
                 "shasum": ""
             },
             "require": {
@@ -368,7 +368,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/2.1.24"
+                "source": "https://github.com/egulias/EmailValidator/tree/2.1.25"
             },
             "funding": [
                 {
@@ -376,7 +376,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-14T15:56:27+00:00"
+            "time": "2020-12-29T14:50:06+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -549,6 +549,69 @@
             "time": "2020-04-25T05:56:17+00:00"
         },
         {
+            "name": "kartik-v/bootstrap-fileinput",
+            "version": "v5.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
+                "reference": "dbb4ebb75dbfd42603005aeb323e4e8e970e0dfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/dbb4ebb75dbfd42603005aeb323e4e8e970e0dfa",
+                "reference": "dbb4ebb75dbfd42603005aeb323e4e8e970e0dfa",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\plugins\\fileinput\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An enhanced HTML 5 file input for Bootstrap 3.x with features for file preview for many file types, multiple selection, ajax uploads, and more.",
+            "homepage": "https://github.com/kartik-v/bootstrap-fileinput",
+            "keywords": [
+                "ajax",
+                "bootstrap",
+                "delete",
+                "file",
+                "image",
+                "input",
+                "jquery",
+                "multiple",
+                "preview",
+                "progress",
+                "upload"
+            ],
+            "support": {
+                "issues": "https://github.com/kartik-v/bootstrap-fileinput/issues",
+                "source": "https://github.com/kartik-v/bootstrap-fileinput/tree/v5.1.3"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/bootstrap-fileinput",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-10-23T19:33:56+00:00"
+        },
+        {
             "name": "kartik-v/yii2-krajee-base",
             "version": "v2.0.5",
             "source": {
@@ -610,12 +673,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widget-datepicker.git",
-                "reference": "fada92bc506d382ea3367daac6a1f7a9adf434b2"
+                "reference": "98257627814abf52aa8c1e6dc020d8eb6c1c39b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/fada92bc506d382ea3367daac6a1f7a9adf434b2",
-                "reference": "fada92bc506d382ea3367daac6a1f7a9adf434b2",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/98257627814abf52aa8c1e6dc020d8eb6c1c39b5",
+                "reference": "98257627814abf52aa8c1e6dc020d8eb6c1c39b5",
                 "shasum": ""
             },
             "require": {
@@ -661,35 +724,36 @@
                 "issues": "https://github.com/kartik-v/yii2-widget-datepicker/issues",
                 "source": "https://github.com/kartik-v/yii2-widget-datepicker/tree/master"
             },
-            "time": "2020-03-20T14:21:31+00:00"
+            "time": "2020-12-29T09:25:58+00:00"
         },
         {
-            "name": "kartik-v/yii2-widget-timepicker",
+            "name": "kartik-v/yii2-widget-fileinput",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-timepicker.git",
-                "reference": "27847bf0a3178d8ce526fe8a0f97832956ce8e45"
+                "url": "https://github.com/kartik-v/yii2-widget-fileinput.git",
+                "reference": "e15d65047af23a3cf25e47e8c23444e750a27f2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-timepicker/zipball/27847bf0a3178d8ce526fe8a0f97832956ce8e45",
-                "reference": "27847bf0a3178d8ce526fe8a0f97832956ce8e45",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-fileinput/zipball/e15d65047af23a3cf25e47e8c23444e750a27f2c",
+                "reference": "e15d65047af23a3cf25e47e8c23444e750a27f2c",
                 "shasum": ""
             },
             "require": {
+                "kartik-v/bootstrap-fileinput": ">=5.0.0",
                 "kartik-v/yii2-krajee-base": ">=2.0.0"
             },
             "default-branch": true,
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "kartik\\time\\": "src"
+                    "kartik\\file\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -703,24 +767,30 @@
                     "homepage": "http://www.krajee.com/"
                 }
             ],
-            "description": "Enhanced Yii2 wrapper for the bootstrap timepicker plugin (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-timepicker",
+            "description": "An enhanced FileInput widget for Bootstrap 3.x & 4.x with file preview, multiple selection, and more features (sub repo split from yii2-widgets)",
+            "homepage": "https://github.com/kartik-v/yii2-widget-fileinput",
             "keywords": [
-                "bootstrap",
                 "extension",
+                "file",
                 "form",
+                "input",
                 "jquery",
-                "picker",
                 "plugin",
-                "time",
+                "upload",
                 "widget",
                 "yii2"
             ],
             "support": {
-                "issues": "https://github.com/kartik-v/yii2-widget-timepicker/issues",
-                "source": "https://github.com/kartik-v/yii2-widget-timepicker/tree/master"
+                "issues": "https://github.com/kartik-v/yii2-widget-fileinput/issues",
+                "source": "https://github.com/kartik-v/yii2-widget-fileinput/tree/master"
             },
-            "time": "2019-05-25T07:33:17+00:00"
+            "funding": [
+                {
+                    "url": "https://opencollective.com/yii2-widget-fileinput",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-12-05T15:43:43+00:00"
         },
         {
             "name": "npm-asset/bootstrap",
@@ -1365,16 +1435,16 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.39.3",
+            "version": "2.0.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "7c3b93b57e568509a7cb5cef826d8c424a779f3f"
+                "reference": "debb520c1d72a2c97c09d70a2a2a4f600ef3958e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/7c3b93b57e568509a7cb5cef826d8c424a779f3f",
-                "reference": "7c3b93b57e568509a7cb5cef826d8c424a779f3f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/debb520c1d72a2c97c09d70a2a2a4f600ef3958e",
+                "reference": "debb520c1d72a2c97c09d70a2a2a4f600ef3958e",
                 "shasum": ""
             },
             "require": {
@@ -1482,7 +1552,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-23T19:17:58+00:00"
+            "time": "2020-12-23T15:44:43+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1907,16 +1977,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "4.1.13",
+            "version": "4.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "e817f83fe019ed3f9c280254b88f90cc70c3d7cf"
+                "reference": "bf2d7861cc6cf4e118a21c6945f482a5c822636c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/e817f83fe019ed3f9c280254b88f90cc70c3d7cf",
-                "reference": "e817f83fe019ed3f9c280254b88f90cc70c3d7cf",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/bf2d7861cc6cf4e118a21c6945f482a5c822636c",
+                "reference": "bf2d7861cc6cf4e118a21c6945f482a5c822636c",
                 "shasum": ""
             },
             "require": {
@@ -1990,7 +2060,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/Codeception/issues",
-                "source": "https://github.com/Codeception/Codeception/tree/4.1.13"
+                "source": "https://github.com/Codeception/Codeception/tree/4.1.14"
             },
             "funding": [
                 {
@@ -1998,7 +2068,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-12-20T13:35:09+00:00"
+            "time": "2020-12-28T19:16:28+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -2056,16 +2126,16 @@
         },
         {
             "name": "codeception/lib-innerbrowser",
-            "version": "1.3.4",
+            "version": "1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-innerbrowser.git",
-                "reference": "fd921e089147057b456ca3660de72112167e40a4"
+                "reference": "956101b060a0d898a1ed8c106fd4d81adf25fd87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/fd921e089147057b456ca3660de72112167e40a4",
-                "reference": "fd921e089147057b456ca3660de72112167e40a4",
+                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/956101b060a0d898a1ed8c106fd4d81adf25fd87",
+                "reference": "956101b060a0d898a1ed8c106fd4d81adf25fd87",
                 "shasum": ""
             },
             "require": {
@@ -2110,9 +2180,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/lib-innerbrowser/issues",
-                "source": "https://github.com/Codeception/lib-innerbrowser/tree/1.3.4"
+                "source": "https://github.com/Codeception/lib-innerbrowser/tree/1.3.5"
             },
-            "time": "2020-10-22T05:45:03+00:00"
+            "time": "2021-01-02T18:59:34+00:00"
         },
         {
             "name": "codeception/module-asserts",
@@ -2225,25 +2295,22 @@
         },
         {
             "name": "codeception/module-yii2",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-yii2.git",
-                "reference": "0e33d34991b58ffe7f2cae7158ae4221b677ec66"
+                "reference": "7e2eaeb414315271d545e17c330b3aaf08911927"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-yii2/zipball/0e33d34991b58ffe7f2cae7158ae4221b677ec66",
-                "reference": "0e33d34991b58ffe7f2cae7158ae4221b677ec66",
+                "url": "https://api.github.com/repos/Codeception/module-yii2/zipball/7e2eaeb414315271d545e17c330b3aaf08911927",
+                "reference": "7e2eaeb414315271d545e17c330b3aaf08911927",
                 "shasum": ""
             },
             "require": {
                 "codeception/codeception": "^4.0",
                 "codeception/lib-innerbrowser": "^1.0",
-                "php": ">=5.6.0 <8.0"
-            },
-            "require-dev": {
-                "codeception/util-robohelpers": "dev-master"
+                "php": ">=5.6.0 <8.1"
             },
             "type": "library",
             "autoload": {
@@ -2274,22 +2341,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/module-yii2/issues",
-                "source": "https://github.com/Codeception/module-yii2/tree/master"
+                "source": "https://github.com/Codeception/module-yii2/tree/1.1.2"
             },
-            "time": "2020-08-28T06:50:26+00:00"
+            "time": "2020-12-21T15:21:56+00:00"
         },
         {
             "name": "codeception/phpunit-wrapper",
-            "version": "8.1.3",
+            "version": "8.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/phpunit-wrapper.git",
-                "reference": "8c2c9b49d20b6e2d61e926a16b1bf2cee5f4db9c"
+                "reference": "f41335f0b4dd17cf7bbc63e87943b3ae72a8bbc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/8c2c9b49d20b6e2d61e926a16b1bf2cee5f4db9c",
-                "reference": "8c2c9b49d20b6e2d61e926a16b1bf2cee5f4db9c",
+                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/f41335f0b4dd17cf7bbc63e87943b3ae72a8bbc3",
+                "reference": "f41335f0b4dd17cf7bbc63e87943b3ae72a8bbc3",
                 "shasum": ""
             },
             "require": {
@@ -2322,9 +2389,9 @@
             "description": "PHPUnit classes used by Codeception",
             "support": {
                 "issues": "https://github.com/Codeception/phpunit-wrapper/issues",
-                "source": "https://github.com/Codeception/phpunit-wrapper/tree/8.1.3"
+                "source": "https://github.com/Codeception/phpunit-wrapper/tree/8.1.4"
             },
-            "time": "2020-10-11T18:16:48+00:00"
+            "time": "2020-12-28T14:00:08+00:00"
         },
         {
             "name": "codeception/stub",
@@ -5675,16 +5742,16 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.15",
+            "version": "2.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "317f85c1ac7a8c0b73eea345a49066b5570aa2c6"
+                "reference": "0d8ce76b2dd036a5fc38b26434e1c672ad8975a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/317f85c1ac7a8c0b73eea345a49066b5570aa2c6",
-                "reference": "317f85c1ac7a8c0b73eea345a49066b5570aa2c6",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/0d8ce76b2dd036a5fc38b26434e1c672ad8975a9",
+                "reference": "0d8ce76b2dd036a5fc38b26434e1c672ad8975a9",
                 "shasum": ""
             },
             "require": {
@@ -5761,7 +5828,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-13T10:09:11+00:00"
+            "time": "2020-12-23T16:36:12+00:00"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -5908,7 +5975,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "kartik-v/yii2-widget-datepicker": 20,
-        "kartik-v/yii2-widget-timepicker": 20
+        "kartik-v/yii2-widget-fileinput": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

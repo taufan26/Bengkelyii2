@@ -94,7 +94,13 @@ class BarangController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $imageupdate = UploadedFile::getInstance($model,'image');
+            if (isset($imageupdate->size)) {
+                $imageupdate->saveAs('uploads/'.$imageupdate->baseName.'.'.$imageupdate->extension);
+            }
+            $model->image = $imageupdate->baseName.'.'.$imageupdate->extension;
+            $model->save(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\file\FileInput;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Profile */
@@ -23,7 +24,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'note')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'img_profile')->fileInput() ?>
+    <?= $form->field($model, 'img_profile')->fileinput()?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

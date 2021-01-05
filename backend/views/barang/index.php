@@ -11,6 +11,7 @@ $this->title = 'Sparepart';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="barang-index">
+        <span class="icon"><i class="fas fa-list-alt"></i></span>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
