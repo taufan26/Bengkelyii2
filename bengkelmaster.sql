@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2020 at 04:20 AM
+-- Generation Time: Jan 07, 2021 at 01:03 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.4.9
 
@@ -55,7 +55,9 @@ INSERT INTO `barang` (`id`, `nama`, `deskripsi`, `quantity`, `harga`, `stock`, `
 (6, 'Busi', 'B36 Busi Mobil Bosch', 1, '50000', 100, 'Toyota', 'Vtoyota', 'Baru', 'busi.jpg', 1, '2020-12-01 03:10:46'),
 (7, 'Unik Turbo ', 'Unik Turbo vx', 1, '60000', 100, 'Toyota', 'Vtoyota', 'Baru', 'turbo.jpg', 1, '2020-12-01 04:29:39'),
 (8, 'Bumper', 'Bumper Ingriis', 1, '70000', 100, 'Honda', 'Vhonda', 'Baru', 'bemper.jpg', 1, '2020-12-01 04:33:31'),
-(9, 'Accord Cielo', 'Import jepang', 4, '780000', 100, 'Honda', 'Vhonda', 'Baru', 'accord.jpg', 1, '2020-12-08 02:15:56');
+(9, 'Accord Cielo', 'Import jepang', 4, '780000', 100, 'Honda', 'Vhonda', 'Baru', 'accord.jpg', 1, '2020-12-08 02:15:56'),
+(11, 'Grille', 'Untuk Dengfeng', 1, '663333', 100, 'Toyota', 'Vtoyota', 'Baru', 'grille.jpg', 1, '2021-01-05 06:25:08'),
+(12, 'Wing aki', 'aaaaa', 12, '10000', 1000, 'Toyota', 'Vhonda', 'Baru', 'grille.jpg', 1, '2021-01-06 02:36:12');
 
 -- --------------------------------------------------------
 
@@ -70,6 +72,7 @@ CREATE TABLE `booking` (
   `tanggal` date NOT NULL,
   `service_name` varchar(100) NOT NULL,
   `jam` varchar(100) NOT NULL,
+  `status` varchar(50) NOT NULL DEFAULT 'Menunggu Konfirmasi',
   `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -77,11 +80,30 @@ CREATE TABLE `booking` (
 -- Dumping data for table `booking`
 --
 
-INSERT INTO `booking` (`id`, `nama`, `email`, `tanggal`, `service_name`, `jam`, `create_at`) VALUES
-(7, 'taufan', 'taufanyusuf26@yahoo.co.id', '2020-12-05', 'Derek service', '13:28', '2020-12-04 03:26:02'),
-(8, 'taufan', 'taufanyusuf26@yahoo.co.id', '2020-12-12', 'Derek service', '15:00', '2020-12-07 03:08:48'),
-(9, 'taufan', 'taufanyusuf26@yahoo.co.id', '2020-12-12', 'Derek service', '15:00', '2020-12-07 03:08:48'),
-(10, 'yusuf', 'yusuf@gmail.com', '2020-12-08', 'Ganti Aki Baterai', '03:00', '2020-12-07 06:19:10');
+INSERT INTO `booking` (`id`, `nama`, `email`, `tanggal`, `service_name`, `jam`, `status`, `create_at`) VALUES
+(7, 'taufan', 'taufanyusuf26@yahoo.co.id', '2020-12-05', 'Derek service', '13:28', 'Terkonfirmasi', '2020-12-04 03:26:02'),
+(8, 'taufan', 'taufanyusuf26@yahoo.co.id', '2020-12-12', 'Derek service', '15:00', 'Di Tolak', '2020-12-07 03:08:48'),
+(9, 'taufan', 'taufanyusuf26@yahoo.co.id', '2020-12-12', 'Derek service', '15:00', 'Di Tolak', '2020-12-07 03:08:48'),
+(10, 'yusuf', 'yusuf@gmail.com', '2020-12-08', 'Ganti Aki Baterai', '03:00', 'Terkonfirmasi', '2020-12-07 06:19:10'),
+(11, 'yusuf', 'yusuf@gmail.com', '2020-12-18', 'Ganti Ban', '16:22', 'Terkonfirmasi', '2020-12-14 07:20:53'),
+(12, 'nugroho', 'nugroho@gmail.com', '2020-12-15', 'Ganti Ban', '12:00', 'Terkonfirmasi', '2020-12-14 07:34:05'),
+(13, 'megu', 'megu@gmail.com', '2020-12-24', 'Ganti Oli & Rem', '20:02', 'Menunggu Konfirmasi', '2020-12-21 06:57:59'),
+(14, 'Taufan', 'test@gmail.com', '2021-01-25', 'Ganti Oli & Rem', '17:40', 'Terkonfirmasi', '2021-01-05 07:37:37'),
+(15, 'taufan', 'taufanyusuf26@yahoo.co.id', '2021-01-08', 'Ganti Aki Baterai', '17:02', 'Terkonfirmasi', '2021-01-05 07:59:45'),
+(16, 'taufan', 'taufanyusuf26@yahoo.co.id', '2021-01-07', 'Ganti Aki Baterai', '11:40', 'Terkonfirmasi', '2021-01-06 02:32:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart_items`
+--
+
+CREATE TABLE `cart_items` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(2) NOT NULL,
+  `create_by` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -103,7 +125,8 @@ CREATE TABLE `contact_form` (
 --
 
 INSERT INTO `contact_form` (`id`, `name`, `email`, `subject`, `body`, `created_at`) VALUES
-(1, 'Taufan Yusuf Nugroho', 'taufan@email.com', 'Sangat Bagus', 'Aku Suka', '2020-12-02 02:51:12');
+(1, 'Taufan Yusuf Nugroho', 'taufan@email.com', 'Sangat Bagus', 'Aku Suka', '2020-12-02 02:51:12'),
+(2, 'Taufan', 'taudan@gmail.com', 'banyak error', 'Perbaiki woy', '2020-12-14 07:10:14');
 
 -- --------------------------------------------------------
 
@@ -123,7 +146,28 @@ CREATE TABLE `migration` (
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
 ('m000000_000000_base', 1606113090),
 ('m130524_201442_init', 1606113098),
-('m190124_110200_add_verification_token_column_to_user_table', 1606113098);
+('m190124_110200_add_verification_token_column_to_user_table', 1606113098),
+('m201124_064518_create_user_addresses_table', 1609301084),
+('m201124_064907_create_orders_table', 1609301086);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `total_price` decimal(10,2) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `firstname` varchar(45) NOT NULL,
+  `lastname` varchar(45) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `trasaction_id` varchar(255) DEFAULT NULL,
+  `paypal_order_id` varchar(255) DEFAULT NULL,
+  `create_at` int(11) DEFAULT NULL,
+  `create_by` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -149,7 +193,10 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `username`, `email`, `nama_lengkap`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `note`, `img_profile`, `create_at`) VALUES
-(1, 'taufan', 'taufanyusuf26@yahoo.co.id', 'Taufan Yusuf Nugroho', '2020-01-11', 'Laki-laki', 'Indramayu', 'Aku Seorang Manusia', '332769.jpg', '2020-12-10 06:28:33');
+(1, 'taufan', 'taufanyusuf26@yahoo.co.id', 'Taufan Yusuf Nugroho', '2020-01-11', 'Laki-laki', 'Indramayu', 'Aku Seorang Manusia', 'images.jpg', '2020-12-10 06:28:33'),
+(2, 'yusuf', 'yusuf@gmail.com', 'Yusuf Nugroho', '2020-12-01', 'Laki-laki', 'Kiajaran Wetan, Indramayu, Indonesia', 'Saya Manusia', '648557.jpg', '2020-12-11 07:02:52'),
+(3, 'nugroho', 'nugroho@gmail.com', 'Nugroho', '2020-12-06', 'Laki-laki', 'Kiajaran Wetan, Indramayu', 'Aku Aku Aku', '14808.jpg', '2020-12-14 04:01:47'),
+(4, 'megu', 'megu@gmail.com', 'Megumin', '2014-01-28', 'Laki-laki', 'Kiajaran Wetan, Indramayu', 'Akui', '649533.png', '2020-12-15 04:35:56');
 
 -- --------------------------------------------------------
 
@@ -198,6 +245,14 @@ ALTER TABLE `booking`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cart_items`
+--
+ALTER TABLE `cart_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `create_by` (`create_by`);
+
+--
 -- Indexes for table `contact_form`
 --
 ALTER TABLE `contact_form`
@@ -208,6 +263,13 @@ ALTER TABLE `contact_form`
 --
 ALTER TABLE `migration`
   ADD PRIMARY KEY (`version`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `create_by` (`create_by`);
 
 --
 -- Indexes for table `profile`
@@ -232,25 +294,37 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `cart_items`
+--
+ALTER TABLE `cart_items`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `contact_form`
 --
 ALTER TABLE `contact_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`

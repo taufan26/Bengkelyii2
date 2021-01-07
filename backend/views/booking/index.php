@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'status',
             //'create_at',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn','header'=>'Action Colomn'],
         ],
     ]); ?>
 

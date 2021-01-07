@@ -154,7 +154,7 @@ $uurl = Url::to(['user/index']);
                       <th>Nama</th> 
                       <th>Deskripsi</th>
                       <th>Harga</th>
-                      <th>Jumlah Barang</th>
+                      <th>Qty</th>
                       <th>Stok Barang</th>
                     </tr>
                     </thead>
