@@ -60,7 +60,7 @@ $url=Url::to(['site/sparepart']);
 
 				</table>
 				<div style="text-align:right; float:right; width:50%;">
-				<?=Html::a('Checkout',['checkout'], ['class'=>'btn btn-success']) ?>
+				<?=Html::a('Checkout',['checkout']) ?>
 				</div>
 			</div>
 		</div>

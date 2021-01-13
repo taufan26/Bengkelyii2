@@ -1,30 +1,42 @@
 <?php
 namespace frontend\controllers;
 
-use frontend\models\ResendVerificationEmailForm;
-use frontend\models\VerifyEmailForm;
+//yii 
 use Yii;
+use yii\helpers\Url;
+use yii\data\ActiveDataProvider;
 use yii\base\InvalidArgumentException;
 use yii\web\BadRequestHttpException;
+use yii\web\NotFoundHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+
+//common model
 use common\models\LoginForm;
+use common\models\User;
+use common\models\Orders;
+use common\models\OrdersItem;
+
+//frontend model
+use frontend\models\ResendVerificationEmailForm;
+use frontend\models\VerifyEmailForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+
+//backend model
 use backend\models\Barang;
-use yii\data\ActiveDataProvider;
-use yii\helpers\Url;
-use frontend\models\Profile;
-use \yz\shoppingcart\CartPositionTrait;
-use \yz\shoppingcart\CartPositionInterface;
+use common\models\Customer;
+//cart
 use \yz\shoppingcart\Shoppingcart;
+
 /**
  * Site controller
  */
-class SiteController extends Controller
+
+ class SiteController extends Controller
 {
     public $enableCsrfValidation = false;
     /**
@@ -179,7 +191,7 @@ class SiteController extends Controller
 
     public function actionAddToCart($id)
     {
-        $cart = Yii::$app->cart;
+        $cart = new Shoppingcart();
 
         $model = Barang::findOne($id);
         if ($model) {
@@ -194,18 +206,17 @@ class SiteController extends Controller
     {
         $cart = new Shoppingcart();
         $morder= new Orders();
-        $cusid=User::find()->where(['id'=>Yii::$app->user->identity->id])->none();
+        $cusid=Customer::find()->where(['user_id'=>Yii::$app->user->identity->id])->one();
         $morder->date=date('Y-m-d H:i:s');
         $morder->customer_id=$cusid->id;
         $morder->save();
-        foreach ($cart->getPositions() as $data) {
+        foreach ($cart->getPositions() as $data) 
+        {
             $mdetorder = new OrdersItem();
             $mdetorder->order_id = $morder->id;
-            $mdetorder->item_id = $data->id;
+            $mdetorder->barang_id = $data->id;
             $mdetorder->save();
         }
-        $cart->removeAll();
-        return $this->redirect(['history']);
     }
 
     /**

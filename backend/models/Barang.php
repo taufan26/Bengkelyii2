@@ -74,7 +74,7 @@ class Barang extends \yii\db\ActiveRecord implements CartPositionInterface
 
     public function getPrice()
     {
-        return $this->harga;
+        return $this->price;
     }
 
     public function getId()

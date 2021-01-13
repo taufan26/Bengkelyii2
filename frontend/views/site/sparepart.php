@@ -87,24 +87,13 @@ $urll = Url::to(['site/cart']);
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
-                        <h2>Category</h2>
-                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Toyota</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Honda</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Yamaha</a></h4>
-                                </div>
-                            </div>
-                        </div><!--/category-products-->
+                        <h2>Promo Terbaru</h2>
+                        <div class="shipping text-center"><!--shipping-->
+							<img src="images/home/promo2.jpg" alt="" style="width:250px;height:250px;"/>
+                        </div><!--/shipping-->
+                        <div class="shipping text-center"><!--shipping-->
+							<img src="images/home/shipping.jpg" alt=""/>
+						</div><!--/shipping-->
                     </div>
                 </div>
                 
