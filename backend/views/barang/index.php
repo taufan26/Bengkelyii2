@@ -1,5 +1,7 @@
 <?php
 
+use backend\models\Barang;
+use yii\data\ActiveDataProvider;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -13,7 +15,13 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="barang-index">
         <span class="icon"><i class="fas fa-list-alt"></i></span>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); 
+    $dataProvider = new ActiveDataProvider([
+        'query' => Barang::find(),
+        'pagination' => [
+            'pageSize' => 8,
+        ],
+    ]);?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

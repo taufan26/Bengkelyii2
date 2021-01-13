@@ -1,5 +1,7 @@
 <?php
 
+use backend\models\User;
+use yii\data\ActiveDataProvider;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -12,7 +14,14 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]);
+    $dataProvider = new ActiveDataProvider([
+        'query' => User::find(),
+        'pagination' => [
+            'pageSize' => 8,
+        ],
+    ]);
+    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

@@ -1,7 +1,9 @@
 <?php
 
+use backend\models\Booking;
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\data\ActiveDataProvider;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\BookingSearch */
@@ -15,7 +17,15 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Booking', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]);
+    $dataProvider = new ActiveDataProvider([
+        'query' => Booking::find(),
+        'pagination' => [
+            'pageSize' => 8,
+        ],
+    ]);
+    ?>
+    
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
