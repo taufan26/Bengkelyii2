@@ -20,7 +20,7 @@ $url=Url::to(['site/sparepart']);
 					<thead>
 						<tr class="cart_menu">
 							<td class="image">Item</td>
-							<td class="description"></td>
+							<td class="description">Deskripsi</td>
 							<td class="price">Price</td>
 							<td class="quantity">Quantity</td>
 							<td class="total">Total</td>

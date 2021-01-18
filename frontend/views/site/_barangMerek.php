@@ -9,9 +9,15 @@ use yii\helpers\Html;
                 <img height="150px" src="../../backend/web/uploads/<?=$model->image?>" alt="" />
                 <h2>RP.<?=$model->harga?></h2>
                 <p><?=$model->nama?></p>
-                <?=Html::a('Add to cart',['add-to-cart','id'=>$model->id], ['class'=>'btn btn-success']) ?>
-            </div>
-            
+                <a class="btn btn-default add-to-cart"
+                    href="<?=Url::to(['add-to-cart','id'=>$model->id])?>">
+                    <i class="fa fa-shopping-cart"></i>Add to cart
+                </a>
+                <a class="btn btn-default add-to-cart" href="<?=Url::to(['/barang','id'=>$model->id])?>">
+                    <i class="fa fa-info"></i>
+                    Barang Detail
+                </a>
+            </div>            
         </div>
     </div>
 </div>

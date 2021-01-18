@@ -128,7 +128,10 @@ class BookingController extends Controller
 
     public function actionKonfirmasi()
     {
-        $bookingList = new ActiveDataProvider(['query'=>Booking::find()->from(['booking'])->orderBy('create_at DESC') 
+        $bookingList = new ActiveDataProvider(['query'=>Booking::find()
+        ->from(['booking'])
+        ->orderBy('create_at DESC'),
+         'pagination'=>['pageSize'=>10,]
     ]);
 
         return $this->render('konfirmasi', ['bookingList'=>$bookingList,]);

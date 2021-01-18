@@ -89,7 +89,7 @@ $urll = Url::to(['site/cart']);
                     <div class="left-sidebar">
                         <h2>Promo Terbaru</h2>
                         <div class="shipping text-center"><!--shipping-->
-							<img src="images/home/promo2.jpg" alt="" style="width:250px;height:250px;"/>
+							<img src="images/home/shipping.jpg" alt="" style="width:250px;height:250px;"/>
                         </div><!--/shipping-->
                         <div class="shipping text-center"><!--shipping-->
 							<img src="images/home/shipping.jpg" alt=""/>

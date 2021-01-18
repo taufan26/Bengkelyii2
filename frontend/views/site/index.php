@@ -4,23 +4,24 @@
 
 $this->title = 'Bengkel Master';
 ?>
-
 <div class="site-index" style="background-color: #FFFFFF">
     <img src="images/banner-main-page.jpg" style="width: 1140px;height: 500px;">
     <div class="container-fluid">
         <div class="row" style="background-color: #B22222;color: white;">
             <div class="col-md-4">
                 <center>
+                    <blockquote>
                     <h2>MECHANICS</h2>
-                    <h4>Kami memiliki Mekanik hebat yang <br> mampu memecahkan segala jenis masalah <br> Anda.</h4>
+                    <h4>Kami memiliki Mekanik hebat yang <br> mampu memecahkan segala jenis masalah <br>Anda.</h4>
+                    </blockquote>
                 </center>
             </div>
             <div class="col-md-4">
                 <center>
-                        <blockquote>
-                                <h2>AKSESORIS MOBIL</h2>
-                                <h4>Setiap aksesori mobil <br> tersedia di sini.</h4>                
-                        </blockquote>
+                    <blockquote>
+                            <h2>AKSESORIS MOBIL</h2>
+                            <h4>Setiap aksesori mobil <br> tersedia di sini.<br> dan terjamin kualitasnya dan terjangkau</h4>                
+                    </blockquote>
                 </center>
             </div>
             <div class="col-md-4">

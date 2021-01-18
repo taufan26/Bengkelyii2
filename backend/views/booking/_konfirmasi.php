@@ -14,6 +14,9 @@ use yii\helpers\Html;
     </td>
     <td><span class="badge badge-info"><?=$model->status?></span></td>
     <td>
+    <div class="sparkbar" data-color="#00a65a" data-height="20"><?=$model->create_at?></div>
+    </td>
+    <td>
     	<p>
         <?= Html::a('Konfirmasi', ['ukonfirmasi', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
     	</p>

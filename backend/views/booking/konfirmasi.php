@@ -39,6 +39,7 @@ $urll = Url::to(['booking/create']);
                       <th>Tanggal Service</th>
                       <th>Jam Service</th>
                       <th>Status</th>
+                      <th>create_at</th>
                       <th>Konfirmasi</th>
                     </tr>
                     </thead>

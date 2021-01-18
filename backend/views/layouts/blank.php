@@ -19,7 +19,11 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="blank">
+<body 
+    class="blank" 
+    style="background-image: url('uploads/bck.jpg'); 
+    "
+>
 <?php $this->beginBody() ?>
 
     <div class="wrap">

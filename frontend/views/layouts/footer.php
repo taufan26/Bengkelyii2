@@ -3,9 +3,10 @@
             <div class="row" style="background-color: #B22222;color: white;margin-top: 75px;">
                 <div class="col-md-4">
                     <center>
-                                    <h2><span class="glyphicon glyphicon-earphone"></span> HUBUNGI KAMI</h2>
-                                    <h4>TELP : 08772737688</h4>
-                    
+                    <blockquote>
+                        <h2><span class="glyphicon glyphicon-earphone"></span> HUBUNGI KAMI</h2>
+                        <h4>TELP : 08772737688</h4>
+                    </blockquote>
                     </center>
                 </div>
                 <div class="col-md-4">

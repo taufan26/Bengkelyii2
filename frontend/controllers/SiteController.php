@@ -14,9 +14,6 @@ use yii\filters\AccessControl;
 
 //common model
 use common\models\LoginForm;
-use common\models\User;
-use common\models\Orders;
-use common\models\OrdersItem;
 
 //frontend model
 use frontend\models\ResendVerificationEmailForm;
@@ -28,7 +25,7 @@ use frontend\models\ContactForm;
 
 //backend model
 use backend\models\Barang;
-use common\models\Customer;
+
 //cart
 use \yz\shoppingcart\Shoppingcart;
 
@@ -200,23 +197,6 @@ use \yz\shoppingcart\Shoppingcart;
             return $this->render('cart',['data'=>$data]);
         }
         throw new NotFoundHttpException();
-    }
-
-    public function actionCheckOut()
-    {
-        $cart = new Shoppingcart();
-        $morder= new Orders();
-        $cusid=Customer::find()->where(['user_id'=>Yii::$app->user->identity->id])->one();
-        $morder->date=date('Y-m-d H:i:s');
-        $morder->customer_id=$cusid->id;
-        $morder->save();
-        foreach ($cart->getPositions() as $data) 
-        {
-            $mdetorder = new OrdersItem();
-            $mdetorder->order_id = $morder->id;
-            $mdetorder->barang_id = $data->id;
-            $mdetorder->save();
-        }
     }
 
     /**
