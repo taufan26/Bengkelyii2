@@ -1,8 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="<?=\yii\helpers\Url::home()?>" class="brand-link">
-        <img src="uploads/ad.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-             style="">
+        <img src="uploads/ad.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
         <span class="brand-text font-weight-light">Admin</span>
     </a>
 
@@ -44,6 +43,15 @@
                     ],
                     ['label' => 'User', 'iconStyle' => 'far','url' => ['user/index'], 'icon' => 'user',],
                     ['label' => 'Complaint & Feedback', 'iconStyle' => 'far','url' => ['contact/index'], 'icon'=>'comments'],
+                    [
+                        'label' => 'Cetak Laporan',
+                        'icon' => 'print',
+                        'items' => [
+                            ['label' => 'Laporan Booking', 'url' => ['/laporan/index'], 'icon' => 'file'],
+                            ['label' => 'Laporan Sparepart', 'url' => ['/laporan/barang'],'icon'=> 'file'],
+                            ['label' => 'Laporan Pembelian', 'icon' => 'file'],
+                        ]
+                    ],
                     ['label' => 'Yii2 PROVIDED', 'header' => true],
                     ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],
                     ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
