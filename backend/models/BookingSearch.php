@@ -18,7 +18,7 @@ class BookingSearch extends Booking
     {
         return [
             [['id'], 'integer'],
-            [['nama', 'email', 'tanggal', 'service_name', 'jam', 'create_at'], 'safe'],
+            [['nama', 'email', 'tanggal', 'service_name', 'jam', 'create_at', 'status'], 'safe'],
         ];
     }
 
@@ -66,7 +66,8 @@ class BookingSearch extends Booking
         $query->andFilterWhere(['like', 'nama', $this->nama])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'service_name', $this->service_name])
-            ->andFilterWhere(['like', 'jam', $this->jam]);
+            ->andFilterWhere(['like', 'jam', $this->jam])
+            ->andFilterWhere(['like', 'status', $this->status]);
 
         return $dataProvider;
     }

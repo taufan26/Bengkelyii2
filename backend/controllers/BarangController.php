@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use backend\models\Barang;
 use backend\models\BarangSearch;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -37,11 +38,14 @@ class BarangController extends Controller
     public function actionIndex()
     {
         $searchModel = new BarangSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $listBarang = new ActiveDataProvider(['query'=>Barang::find()
+        ->from('barang'),
+        'pagination'=>['pageSize'=>5,]
+        ]);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'dataProvider' => $listBarang,
         ]);
     }
 

@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use backend\models\ContactForm;
 use backend\models\ContactSearch;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -36,11 +37,13 @@ class ContactController extends Controller
     public function actionIndex()
     {
         $searchModel = new ContactSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        $listFeedback = new ActiveDataProvider(['query'=>ContactForm::find()
+        ->from('contact_form'),
+        'pagination'=>['pageSize'=>5,]
+        ]);
         return $this->render('index', [
             'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'dataProvider' => $listFeedback,
         ]);
     }
 

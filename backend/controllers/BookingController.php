@@ -37,11 +37,13 @@ class BookingController extends Controller
     public function actionIndex()
     {
         $searchModel = new BookingSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        $listBooking = new ActiveDataProvider(['query'=>Booking::find()
+        ->from('booking'),
+        'pagination'=>['pageSize'=>5,]
+        ]);
         return $this->render('index', [
             'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'dataProvider' => $listBooking,
         ]);
     }
 
