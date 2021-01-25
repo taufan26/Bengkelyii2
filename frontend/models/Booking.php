@@ -58,12 +58,12 @@ class Booking extends \yii\db\ActiveRecord
     public function getTanggal()
     {
         if ($this->tanggal != '') {
-            return date('d-m-Y', strtotime($this->tanggal));
+            return date('Y-m-d', strtotime($this->tanggal));
         }
     }
 
     public function setTanggal($value)
     {
-        $this->tanggal = Date('Y-m-d', strtotime($value));
+        $this->tanggal = Date('d-m-Y', strtotime($value));
     }
 }

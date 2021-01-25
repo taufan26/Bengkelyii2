@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="<?=\yii\helpers\Url::home()?>" class="brand-link">
-        <img src="uploads/ad.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
+        <img src="uploads/images.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
         <span class="brand-text font-weight-light">Admin</span>
     </a>
 
@@ -33,12 +33,13 @@
                         ]
                     ],
                     [
-                        'label' => 'Penjualan Sparepart',
+                        'label' => 'Sparepart',
                         'icon' => 'shopping-cart',
                         'items' => [
                             ['label' => 'List Sparepart', 'url' => ['/barang/index'], 'icon' => 'tasks'],
                             ['label' => 'Tambah Sparepart', 'url' => ['/barang/create'],'icon'=> 'wrench'],
-                            ['label' => 'Konfirmasi Pembayaran', 'icon' => 'fa fa-check'],
+                            ['label' => 'List promo', 'url' => ['/promo/index'], 'icon' => 'tasks'],
+                            ['label' => 'Tambah promo', 'url' => ['/promo/create'],'icon'=> 'wrench'],
                         ]
                     ],
                     ['label' => 'User', 'iconStyle' => 'far','url' => ['user/index'], 'icon' => 'user',],
@@ -49,7 +50,6 @@
                         'items' => [
                             ['label' => 'Laporan Booking', 'url' => ['/laporan/index'], 'icon' => 'file'],
                             ['label' => 'Laporan Sparepart', 'url' => ['/laporan/barang'],'icon'=> 'file'],
-                            ['label' => 'Laporan Pembelian', 'icon' => 'file'],
                         ]
                     ],
                     ['label' => 'Yii2 PROVIDED', 'header' => true],

@@ -1,6 +1,4 @@
 <?php
-
-
 use yii\helpers\Html;
 use kartik\grid\GridView;
 
@@ -23,7 +21,7 @@ $gridColumns = [
    'status',
    'create_at',
 
-    ['class' => 'kartik\grid\ActionColumn','urlCreator'=>function(){return '#';}]
+    ['class' => 'kartik\grid\ActionColumn']
 ];
 ?>
 <div class="booking-index">

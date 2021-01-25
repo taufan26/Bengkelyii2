@@ -74,14 +74,26 @@ class SiteController extends Controller
         ->from('contact_form')
         ->count();
 
-         $bookingList = new ActiveDataProvider(['query'=>Booking::find()->from(['booking'])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>3,
-    ]
-    ]);
-         $barangList = new ActiveDataProvider(['query'=>Barang::find()->where(['status'=>1])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>3,
-    ]
-    ]);
+        $bookingList = new ActiveDataProvider([
+            'query'=>Booking::find()
+            ->from(['booking'])
+            ->orderBy('create_at DESC'), 
+            'pagination'=>['pageSize'=>3,]
+        ]);
+        $barangList = new ActiveDataProvider([
+            'query'=>Barang::find()
+            ->where(['status'=>1])
+            ->orderBy('create_at DESC'), 
+            'pagination'=>['pageSize'=>3,]
+        ]);
 
-        return $this->render('index', ['booking'=>$booking, 'barang'=>$barang, 'model'=>$model, 'mail'=>$mail, 'bookingList'=>$bookingList, 'barangList'=>$barangList]);
+        return $this->render('index', ['booking'=>$booking,
+        'barang'=>$barang,
+        'model'=>$model,
+        'mail'=>$mail,
+        'bookingList'=>$bookingList,
+        'barangList'=>$barangList
+        ]);
     }
 
     /**

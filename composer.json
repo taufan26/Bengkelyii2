@@ -27,7 +27,9 @@
         "kartik-v/yii2-widget-fileinput": "dev-master",
         "kartik-v/yii2-krajee-base": "dev-master",
         "kartik-v/yii2-export": "@dev",
-        "kartik-v/yii2-grid": "@dev"
+        "kartik-v/yii2-grid": "@dev",
+        "kartik-v/yii2-nav-x": "dev-master"
+
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

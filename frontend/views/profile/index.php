@@ -32,7 +32,6 @@ use yii\helpers\Url;
               <div class="card-header p-2">
                 <ul class="nav nav-pills">
                   <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Booking</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">History Shop</a></li>
                   <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Edit Profile</a></li>
                 </ul>
               </div><!-- /.card-header -->

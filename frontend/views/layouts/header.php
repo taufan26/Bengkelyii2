@@ -13,55 +13,57 @@ use common\widgets\Alert;
             margin-left:20px; float:left">  
             <h3 style="color: black;"><b>BENGKEL MASTER</b></h3>
             <br>
+            <div style="background-color: black;">
                 <?php
                 NavBar::begin([
                     'options' => [
-                        'class' => 'navbar navbar-default navbar-inverse',
+                        'class' => 'navbar navbar-default',
                     ],
                 ]);
                 $menuItems = [
                     ['label' => '<span class="glyphicon glyphicon-home"></span> HOME',
                     'url' => ['/site/index']],
-                    ['label' => '<span class="glyphicon glyphicon-book"></span> ABOUT',
+                    ['label' => '<span class="glyphicon glyphicon-book"></span> TENTANG KAMI',
                      'url' => ['/site/about']],
-                    ['label' => '<span class="glyphicon glyphicon-phone-alt"></span> CONTACT',
+                    ['label' => '<span class="glyphicon glyphicon-phone-alt"></span> CONTACT US',
                      'url' => ['/site/contact']],
                     ['label' => '<span class="glyphicon glyphicon-wrench"></span> SERVICE',
                      'url' => ['/site/service']],
                 ];
                 if (Yii::$app->user->isGuest) {
                     $menuItems[]=
-                    ['label' =>'<span class="glyphicon glyphicon-time"></span> Booking Online',
+                    ['label' =>'<span class="glyphicon glyphicon-time"></span> BOOKING ONLINE',
                      'url' => ['/site/login']];
                      $menuItems[]=
-                    ['label' => '<span class="glyphicon glyphicon-shopping-cart"></span> Beli Sparepart',
+                    ['label' => '<span class="glyphicon glyphicon-shopping-cart"></span> SPAREPART',
                     'url' => ['/site/login']];
                     $menuItems[]=
-                    ['label' => '<span class="fa fa-user-plus"></span> Signup',
+                    ['label' => '<span class="fa fa-user-plus"></span> SIGN UP',
                     'url' => ['/site/signup']];
                     $menuItems[]=
                     ['label' => '<span class="glyphicon glyphicon-phone">
-                    </span> Login', 'url' => ['/site/login']];
+                    </span> LOGIN', 'url' => ['/site/login']];
                 } else {
-                    $menuItems[] = ['label' => '<span class="glyphicon glyphicon-time"></span> Booking Online', 'url' => ['/site/booking']];
-                    $menuItems[] = ['label' => '<span class="glyphicon glyphicon-shopping-cart"></span> Beli Sparepart', 'url' => ['/site/sparepart']];
-                    $menuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> Profile(' . Yii::$app->user->identity->username . ')', 'url' => ['/profile/index']];
+                    $menuItems[] = ['label' => '<span class="glyphicon glyphicon-time"></span> BOOKING ONLINE', 'url' => ['/site/booking']];
+                    $menuItems[] = ['label' => '<span class="glyphicon glyphicon-shopping-cart"></span> SPAREPART', 'url' => ['/site/sparepart']];
+                    $menuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> PROFILE(' . Yii::$app->user->identity->username . ')', 'url' => ['/profile/index']];
                     $menuItems[] = '<li>'
                         . Html::beginForm(['/site/logout'], 'post')
                         . Html::submitButton(
-                            'Logout',
+                            'LOGOUT',
                             ['class' => 'btn btn-link logout']
                         )
                         . Html::endForm()
                         . '</li>';
                 }
                 echo Nav::widget([
-                    'options' => ['class' => 'navbar-nav navbar-left'],
+                    'options' => ['class' => 'navbar-nav'],
                     'items' => $menuItems,
                     'encodeLabels' => false,
                 ]);
                 NavBar::end();
-            ?>
+                ?>
+            </div>
         </div>                            
     </div>
 </div>

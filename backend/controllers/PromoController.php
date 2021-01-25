@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Barang;
-use backend\models\BarangSearch;
+use common\models\Promo;
+use backend\models\PromoSearch;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -12,9 +12,9 @@ use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 
 /**
- * BarangController implements the CRUD actions for Barang model.
+ * PromoController implements the CRUD actions for Promo model.
  */
-class BarangController extends Controller
+class PromoController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -32,26 +32,26 @@ class BarangController extends Controller
     }
 
     /**
-     * Lists all Barang models.
+     * Lists all Promo models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new BarangSearch();
-        $listBarang = new ActiveDataProvider([
-        'query'=>Barang::find()
-        ->from('barang'),
-        'pagination'=>['pageSize'=>5,]
-        ]);
+        $searchModel = new PromoSearch();
+        $listPromo = new ActiveDataProvider([
+            'query'=>Promo::find()
+            ->from('promo'),
+            'pagination'=>['pageSize'=>5,]
+            ]);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
-            'dataProvider' => $listBarang,
+            'dataProvider' => $listPromo,
         ]);
     }
 
     /**
-     * Displays a single Barang model.
+     * Displays a single Promo model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -64,21 +64,21 @@ class BarangController extends Controller
     }
 
     /**
-     * Creates a new Barang model.
+     * Creates a new Promo model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Barang();
+        $model = new Promo();
 
         if ($model->load(Yii::$app->request->post())) {
 
-            $imageFile = UploadedFile::getInstance($model,'image');
+            $imageFile = UploadedFile::getInstance($model,'img');
             if (isset($imageFile->size)) {
                 $imageFile->saveAs('uploads/'.$imageFile->baseName.'.'.$imageFile->extension);
             }
-            $model->image = $imageFile->baseName.'.'.$imageFile->extension;
+            $model->img = $imageFile->baseName.'.'.$imageFile->extension;
             $model->save(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -89,7 +89,7 @@ class BarangController extends Controller
     }
 
     /**
-     * Updates an existing Barang model.
+     * Updates an existing Promo model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -100,11 +100,11 @@ class BarangController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
-            $imageupdate = UploadedFile::getInstance($model,'image');
+            $imageupdate = UploadedFile::getInstance($model,'img');
             if (isset($imageupdate->size)) {
                 $imageupdate->saveAs('uploads/'.$imageupdate->baseName.'.'.$imageupdate->extension);
             }
-            $model->image = $imageupdate->baseName.'.'.$imageupdate->extension;
+            $model->img = $imageupdate->baseName.'.'.$imageupdate->extension;
             $model->save(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -115,7 +115,7 @@ class BarangController extends Controller
     }
 
     /**
-     * Deletes an existing Barang model.
+     * Deletes an existing Promo model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -129,15 +129,15 @@ class BarangController extends Controller
     }
 
     /**
-     * Finds the Barang model based on its primary key value.
+     * Finds the Promo model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Barang the loaded model
+     * @return Promo the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Barang::findOne($id)) !== null) {
+        if (($model = Promo::findOne($id)) !== null) {
             return $model;
         }
 

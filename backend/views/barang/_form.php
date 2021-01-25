@@ -23,7 +23,8 @@ use kartik\file\FileInput;
 
     <?= $form->field($model, 'stock')->textInput() ?>
 
-    <?= $form->field($model, 'merek')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'merek')->dropDownList(
+            ['Toyota' => 'Toyota', 'Honda' => 'Honda'])?> 
 
     <?= $form->field($model, 'model')->textInput(['maxlength' => true]) ?>
 

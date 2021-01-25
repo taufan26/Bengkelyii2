@@ -41,7 +41,12 @@ class ProfileController extends Controller
         $searchModel = new ProfileSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        $listBooking = new ActiveDataProvider(['query'=>Booking::find()->from('booking')->where(['nama' => Yii::$app->user->identity->username])->orderBy('create_at DESC')]);
+        $listBooking = new ActiveDataProvider([
+            'query'=>Booking::find()
+            ->from('booking')
+            ->where(['nama' => Yii::$app->user->identity->username])
+            ->orderBy('create_at DESC')
+        ]);
 
         $tentangSaya = new ActiveDataProvider(['query'=>Profile::find()->where(['username' => Yii::$app->user->identity->username])]);
 

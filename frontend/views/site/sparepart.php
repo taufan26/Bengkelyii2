@@ -17,17 +17,6 @@ $urll = Url::to(['site/cart']);
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-                        <div class="mainmenu pull-left">
-                            <ul class="nav navbar-nav collapse navbar-collapse">
-                                        <li><a href="checkout.html">Checkout</a></li> 
-                                        <li><a href="<?=$urll?>">Cart</a></li> 
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="search_box pull-right">
-                            <input type="text" placeholder="Search"/>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -88,12 +77,14 @@ $urll = Url::to(['site/cart']);
                 <div class="col-sm-3">
                     <div class="left-sidebar">
                         <h2>Promo Terbaru</h2>
-                        <div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" style="width:250px;height:250px;"/>
-                        </div><!--/shipping-->
-                        <div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt=""/>
-						</div><!--/shipping-->
+                        <?php
+                        echo \yii\widgets\ListView::Widget([
+                            'dataProvider'=>$promo,
+                            'layout'=> "<div class\"items\">{items}</div>",
+                            //'intemOptions'=>['class'=>'item'],
+                            'itemView'=>'_promo',
+                        ])
+                        ?>
                     </div>
                 </div>
                 
@@ -107,7 +98,7 @@ $urll = Url::to(['site/cart']);
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane fade active in" id="tshirt" >
-                                <?php
+                            <?php
                             echo \yii\widgets\ListView::Widget([
                                 'dataProvider'=>$barangMerek1,
                                 'layout'=> "<div class\"items\">{items}</div>",

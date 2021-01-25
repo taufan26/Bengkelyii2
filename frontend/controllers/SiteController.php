@@ -25,7 +25,7 @@ use frontend\models\ContactForm;
 
 //backend model
 use backend\models\Barang;
-
+use common\models\Promo;
 //cart
 use \yz\shoppingcart\Shoppingcart;
 
@@ -138,8 +138,10 @@ use \yz\shoppingcart\Shoppingcart;
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
-                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
-            } else {
+                Yii::$app->session->setFlash('success',
+                 'Thank you for contacting us. We will respond to you as soon as possible.');
+            } else 
+            {
                 Yii::$app->session->setFlash('error', 'There was an error sending your message.');
             }
 
@@ -171,33 +173,43 @@ use \yz\shoppingcart\Shoppingcart;
     }
     public function actionSparepart()
     {
-        //$products = Products::find()->where(['status'=>1])->all();
-        $barang = new ActiveDataProvider(['query'=>Barang::find()->where(['status'=>1])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>6,
-    ]
+    //$products = Products::find()->where(['status'=>1])->all();
+    $barang = new ActiveDataProvider([
+        'query'=>Barang::find()
+        ->where(['status'=>1])
+        ->orderBy('create_at DESC'),
+        'pagination'=>['pageSize'=>6,]
     ]);
 
-    $barangMerek1 = new ActiveDataProvider(['query'=>Barang::find()->where(['merek'=>'Toyota'])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>4,
-    ]
-    ]);
-    $barangMerek2 = new ActiveDataProvider(['query'=>Barang::find()->where(['merek'=>'Honda'])->orderBy('create_at DESC'), 'pagination'=>['pageSize'=>4,
-    ]
+    $barangMerek1 = new ActiveDataProvider([
+        'query'=>Barang::find()
+        ->where(['merek'=>'Toyota'])
+        ->orderBy('create_at DESC'),
+         'pagination'=>['pageSize'=>4,]
     ]);
 
-        return $this->render('sparepart', ['barang'=>$barang, 'barangMerek1'=>$barangMerek1, 'barangMerek2' =>$barangMerek2 ]);
+    $barangMerek2 = new ActiveDataProvider([
+        'query'=>Barang::find()
+        ->where(['merek'=>'Honda'])
+        ->orderBy('create_at DESC'),
+         'pagination'=>['pageSize'=>4,]
+    ]);
+
+    $promo = new ActiveDataProvider([
+        'query'=>Promo::find()
+        ->from('promo')
+        ->orderBy('create_at DESC'),
+        'pagination'=>['pageSize'=>3,]
+    ]);
+
+        return $this->render(
+            'sparepart', ['barang'=>$barang,
+            'barangMerek1'=>$barangMerek1,
+            'barangMerek2'=>$barangMerek2,
+            'promo'=>$promo,
+            ]);
     }
 
-    public function actionAddToCart($id)
-    {
-        $cart = new Shoppingcart();
-
-        $model = Barang::findOne($id);
-        if ($model) {
-            $cart->put($model, 1);
-            $data=$cart->getPositions();
-            return $this->render('cart',['data'=>$data]);
-        }
-        throw new NotFoundHttpException();
-    }
 
     /**
      * Signs user up.
@@ -231,7 +243,8 @@ use \yz\shoppingcart\Shoppingcart;
 
                 return $this->goHome();
             } else {
-                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for the provided email address.');
+                Yii::$app->session->setFlash('error',
+                 'Sorry, we are unable to reset password for the provided email address.');
             }
         }
 
@@ -287,7 +300,8 @@ use \yz\shoppingcart\Shoppingcart;
             }
         }
 
-        Yii::$app->session->setFlash('error', 'Sorry, we are unable to verify your account with provided token.');
+        Yii::$app->session->setFlash('error',
+        'Sorry, we are unable to verify your account with provided token.');
         return $this->goHome();
     }
 
@@ -301,10 +315,12 @@ use \yz\shoppingcart\Shoppingcart;
         $model = new ResendVerificationEmailForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
-                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                Yii::$app->session->setFlash('success',
+                'Check your email for further instructions.');
                 return $this->goHome();
             }
-            Yii::$app->session->setFlash('error', 'Sorry, we are unable to resend verification email for the provided email address.');
+            Yii::$app->session->setFlash('error',
+            'Sorry, we are unable to resend verification email for the provided email address.');
         }
 
         return $this->render('resendVerificationEmail', [
