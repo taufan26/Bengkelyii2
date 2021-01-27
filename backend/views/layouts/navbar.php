@@ -15,9 +15,9 @@ use yii\helpers\Html;
         <!-- <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
         </li> -->
-                <li>
-                    <?= Html::a('Sign out', ['site/logout'], ['data-method' => 'post', 'class' => 'dropdown-item']) ?>
-                </li>
+        <li>
+            <?= Html::a('Sign out', ['site/logout'], ['data-method' => 'post', 'class' => 'dropdown-item']) ?>
+        </li>
     </ul>
 
     <!-- SEARCH FORM -->
