@@ -45,7 +45,8 @@ class ProfileController extends Controller
             'query'=>Booking::find()
             ->from('booking')
             ->where(['nama' => Yii::$app->user->identity->username])
-            ->orderBy('create_at DESC')
+            ->orderBy('create_at DESC'),
+            'pagination'=>['pageSize'=>10,]
         ]);
 
         $tentangSaya = new ActiveDataProvider(['query'=>Profile::find()->where(['username' => Yii::$app->user->identity->username])]);

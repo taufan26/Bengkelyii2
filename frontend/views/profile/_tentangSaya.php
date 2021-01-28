@@ -21,14 +21,14 @@
             <!-- About Me Box -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Tentang Saya</h3>
+                <h3 class="card-title">Tentang Saya</h3> 
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <strong>Tanggal Lahir</strong>
 
                 <p class="text-muted">
-                  <?=$model->tanggal_lahir?>
+                <?=Yii::$app->formatter->asDate($model->tanggal_lahir)?>
                 </p>
 
                 <hr>

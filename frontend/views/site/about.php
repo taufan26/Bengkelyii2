@@ -3,225 +3,118 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<section id="content">
+<section id="slider" style="background-color: #FFFFFF"><!--slider-->
 	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#slider-carousel" data-slide-to="1"></li>
+						<li data-target="#slider-carousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-6">
+                                    <h1>Bengkel<span>Master</span></h1>
+                                    <h2>Menjual Sparepart</h2>
+                                    <p>Menyediakan Berbagai barang yang terjamin Kebagusanya</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="<?=Url::to('@web/')?>images/slader-about1.png" style="height: 300px;" class="girl img-responsive" alt="" />
+                                </div>
+                            </div>
+                            
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1>Bengkel<span>Master</span></h1>
+                                    <h2>Menjual Aksesoris</h2>
+                                    <p>Menyediakan Berbagai barang yang terjamin Kebagusanya</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="<?=Url::to('@web/')?>images/slader-about2.png" style="height: 300px;" class="girl img-responsive" alt="" />
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+				</div>                
+			</div>
+		</div>
+	</div>
+</section><!--/slider-->
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="left-sidebar">
+					<h2 class="title text-center">CV. GARUDA SARANA SEJAHTERA</h2>
+					<h4 style="text-align: center;"><b> VISI :</b></h4>
+
+					<i> MENJADI PERUSAHAAN LAYANAN JASA SISTEM INFORMASI
+					 	DAN TEKNOLOGI INFORMASI TERBAIK DAN TERPERCAYA DALAM SKALA
+					  	NASIONAL MAUPUN INTERNASIONAL
+					</i>
 					
-					<div class="about">
+					<h4 style="text-align: center;"><b>MISI :</b></h4>
 					
-						<div class="row"> 
-							<div class="col-md-12">
-								<div class="about-logo">
-									<h3>We are awesome <span>TEAM</span></h3>
-									<br>
-									<img src="images/lam.jpg" style="width: 1125px;height: 600px;">
-									<br>
-									<p><h4>Mekanik Berpengalaman</h4>
-										Semua mekanik kami diseleksi dan diawasi secara ketat oleh profesional di bidangnya sehingga dapat memberikan tingkat pelayanan terbaik.
-										<br>
-
-										<h4>Teknologi Tercanggih</h4>
-										Kami selalu berinventasi pada hardware & software terbaru demi ketepatan diagnosa, sehingga permasalahan mobil anda bisa diketahui secara lebih cepat dan pasti.
-										<br>
-
-										<h4>Kami lakukan di tempat dan di depan “mata” Anda</h4>
-										Anda bisa mengikuti semua proses diagnosa menggunakan software maupun perbaikan yang dilakukan langsung dihadapan anda
-										<br>
-
-										<h4>Harga Lebih Murah dan Transparan</h4>
-										Sistem yang kami miliki mendukung transparansi dan efisiensi sehingga kami bisa memberikan harga yang lebih terjangkau.
-										<br>
-
-										<h4>Suku Cadang Original</h4>
-										Kami hanya menggunakan suku cadang asli dari pabrikan resmi, yang menjamin kualiatas , daya tahan dan keamanan dalam berkendara.
-										<br>
-
-										<h4>Garansi</h4>
-										Karena kepuasan anda adalah yang utama, semua layanan kami didukung oleh garansi 3 bulan.
-									</p>
-								</div>
-							</div>
-						</div>					
-						<hr>
-						<br>						
-						<div class="row">
-							<div class="col-md-4">
-								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>Why Choose Us?</span></h3>
-								</div>
-								<p>Lebih Dari 30 Tahun Kami Melakukan Service</p>
-							</div>
-							<div class="col-md-4">
-								<div class="block-heading-two">
-									<h3><span>Our Solution</span></h3>
-								</div>		
-								<!-- Accordion starts -->
-								<div class="panel-group" id="accordion-alt3">
-								 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
-								  <div class="panel">	
-									<!-- Panel heading -->
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-											<i class="fa fa-angle-right"></i> Service Berkala
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseOne-alt3" class="panel-collapse collapse">
-										<!-- Panel body -->
-										<div class="panel-body">
-										  Proses perawatan dan perbaikan rutin kendaraan yang meliputi penggantian pelumas pada mesin untuk menjaga performa mesin.
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-											<i class="fa fa-angle-right"></i>Mesin
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseTwo-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Perawatan dan perbaikan engine sistem meliputi engine electrical diagnosis, mecanical engine serta sistem pelumasan dan pendinginan mesin.
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-											<i class="fa fa-angle-right"></i> Kaki-kaki
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseThree-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Perbaikan dan perawatan yang meliputi automatic / manual transmission, suspension system, brake system, steering system dan drive sistem.
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-											<i class="fa fa-angle-right"></i> AC / Electrical 
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseFour-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Perbaikan dan perawatan Air Conditioner, electrical wiring system dan electrical component.
-										</div>
-									 </div>
-								  </div>
-								</div>
-								<!-- Accordion ends -->
-								
-							</div>
-							
-							<div class="col-md-4">
-								<div class="block-heading-two">
-									<h3><span>Our Expertise</span></h3>
-								</div>								
-								<h6>Education</h6>
-								<div class="progress pb-sm">
-								  <!-- White color (progress-bar-white) -->
-								  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-									 <span class="sr-only">100% Complete (success)</span>
-								  </div>
-								</div>
-								<h6>Designing</h6>
-								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-									 <span class="sr-only">70% Complete (success)</span>
-								  </div>
-								</div>
-								<h6>Experience</h6>
-								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-									 <span class="sr-only">100% Complete (success)</span>
-								  </div>
-								</div>
-								<h6>Development</h6>
-								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-									 <span class="sr-only">70% Complete (success)</span>
-								  </div>
-								</div>
-							</div>
-							
-						</div>
-						
-						 						
-						 
-						<br>
-						<!-- Our Team starts -->
-				
-						<!-- Heading -->
-						<div class="block-heading-six">
-							<h4 class="bg-color">Our Team</h4>
-						</div>
-						<br>
-						
-						<!-- Our team starts -->
-						
-						<div class="team-six">
-							<div class="row">
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="images/k0.png" alt="">
-										<!-- Name -->
-										<h4>K Zero</h4>
-										<span class="deg">CEO</span> 
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="images/k1.jpg" alt="">
-										<!-- Name -->
-										<h4>K one</h4>
-										<span class="deg">Designer</span> 
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="images/k3.jpg" alt="">
-										<!-- Name -->
-										<h4>K two</h4>
-										<span class="deg">mechanics</span> 
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="images/k2.jpg" alt="">
-										<!-- Name -->
-										<h4>K Three</h4>
-										<span class="deg">Manager</span> 
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!-- Our team ends -->
-					  
-						
-					</div>
-									
+					<p> 
+					- Sistem Informasi yang terintegrasi dan mudah digunakan
+					<br>
+					- Menyediakan sumber daya manusia terbaik dan profesional
+					<br>
+					- Menyediakan solusi terbaik kepada perusahaan sebagai mitra bisnis
+					<br>
+					- Mengembangkan kualitas sistem informasi dan teknologi informasi
+					<br>
+					- Memberi pelayanan yang ramah, terpercaya, dan bertanggungjawab
+					<p>
 				</div>
-	</section>
-
+			</div>
+			
+			<div class="col-sm-9 padding-right">
+				<div class="features_items" class="tab-pane fade active in"><!--features_items-->
+					<h2 class="title text-center">CV. GARUDA SARANA SEJAHTERA</h2>
+					<p>
+					CV. Garuda Sarana Sejahtera (GSS) adalah Perusahaan yang bergerak di bidang Teknologi Informasi
+					yang berfokus pada pelayanan Pembuatan Sistem Informasi, Pengelolaan dan pengadaan Software
+					maupun Hardware IT Perusahaan. GSS berfokus pada pelayanan Perseorangan, Lembaga Organisasi,
+					Lembaga Pendidikan, Lembaga Pemerintah, Usaha Mikro Kecil dan Menengah (UMKM), dan 
+					perusahaan-perusahaan di dalam maupun di luar negeri. Perusahaan kami telah memiliki izin dan sudah 
+					terdaftar di lembaga hukum Indonesia serta telah memiliki NIB. GSS awal dirintis sejak tahun 2010 dan 
+					mengalami jatuh bangun sampai saat ini sehingga memiliki berbagai pengalaman yang sangat baik untuk 
+					melaksanakan berbagai pekerjaan bidang IT pemrograman dan pada tahun 2019 GSS telah memiliki 
+					team yang solid dan telah resmi memiliki Ijin Badan Usaha. Di Bidang IT Software House, Kami 
+					melayani jasa pembutan website, aplikasi android, point of sales, desain grafis, sistem informasi, 
+					company profile, aplikasi iOS, Iklan SEO Ads, ERP Perusahaan, Instalasi serta Maintenance Komputer 
+					dan Jaringan, dan lain sebagainya. Di samping itu kami juga melayani jasa pelatihan di bidang IT serta 
+					mengadakan atau menerima undangan berbagai seminar tentang IT khususnya bidang Pemrograman.
+					</p>
+					<br>
+					<p>
+					Dengan tim Profesional dan Berpengalaman, kami selalu mengutamakan kepuasan para pelanggan/mitra 
+					dalam menjalankan pekerjaan dengan memberi jaminan garansi dan lain sebagainya. Dan kami terbuka 
+					kerjasama dengan siapa saja untuk menjadikan Indonesia lebih maju ke depannya. Kantor kami berada di 
+					Jl. Klipang Pesona Asri 3 Blok G1 No.6 Semarang
+					</p>
+					<br>
+					<p style="text-align: center; color:blue;">Hormat Kami,</p>
+					<h4 style="text-align: center; color:blue;">CV. GARUDA SARANA SEJAHTERA</h4>
+				</div><!--features_items-->	
+			</div>
+		</div>
+	</div>
+</section>
 

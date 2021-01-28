@@ -54,16 +54,4 @@ class Booking extends \yii\db\ActiveRecord
             'create_at' => 'Create At',
         ];
     }
-
-    public function getTanggal()
-    {
-        if ($this->tanggal != '') {
-            return date('Y-m-d', strtotime($this->tanggal));
-        }
-    }
-
-    public function setTanggal($value)
-    {
-        $this->tanggal = Date('d-m-Y', strtotime($value));
-    }
 }

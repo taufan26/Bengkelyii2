@@ -80,6 +80,12 @@ return [
                 ],
             ],
         ],
+        'formatter' => [
+            'dateFormat' => 'dd.MM.yyyy',
+            'decimalSeparator' => ',',
+            'thousandSeparator' => ' ',
+            'timeZone' => 'Asia/Jakarta',
+       ],
     ],
     'params' => $params,
 ];

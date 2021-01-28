@@ -15,7 +15,10 @@ $gridColumns = [
    'id',
    'nama',
    'email:email',
-   'tanggal',
+   [
+    'attribute' => 'tanggal',
+    'format' => ['date', 'd-M-Y'],
+    ],
    'service_name',
    'jam',
    'status',

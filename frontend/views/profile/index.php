@@ -53,6 +53,7 @@ use yii\helpers\Url;
                               <th>Tanggal Service</th>
                               <th>Jam Service</th>
                               <th>Status</th>
+                              <th>Create At</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -73,11 +74,6 @@ use yii\helpers\Url;
                     </div>
                   </div>
                   <!-- /.tab-pane -->
-                  <div class="tab-pane" id="timeline">
-                    History Pembelian Sparepart
-                  </div>
-                  <!-- /.tab-pane -->
-
                   <div class="tab-pane" id="settings">
                     <?php
                                   echo \yii\widgets\ListView::Widget([

@@ -21,7 +21,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'username',
             'email:email',
             'nama_lengkap',
-            'tanggal_lahir',
+            [
+            'attribute' => 'tanggal_lahir',
+            'format' => ['date', 'd-M-Y'],
+            ],
             'jenis_kelamin',
             'alamat',
             'note:ntext',

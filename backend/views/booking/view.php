@@ -30,7 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'nama',
             'email:email',
-            'tanggal',
+            [
+            'attribute' => 'tanggal',
+            'format' => ['date', 'd-M-Y'],
+            ],
             'service_name',
             'jam',
             'create_at',
