@@ -151,4 +151,6 @@ class BookingController extends Controller
             'model' => $model,
         ]);
     }
+
 }
+

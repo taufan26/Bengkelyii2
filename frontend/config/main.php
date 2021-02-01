@@ -59,7 +59,7 @@ return [
         'formatter' => [
             'dateFormat' => 'dd.MM.yyyy',
             'decimalSeparator' => ',',
-            'thousandSeparator' => ' ',
+            'thousandSeparator' => '.',
             'currencyCode' => 'IND',
        ],
     ],

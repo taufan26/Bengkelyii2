@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
 
 //use yii\web\View; 
 //use  frontend\models\Profile; 
@@ -67,6 +68,10 @@ use yii\helpers\Url;
                               ?>
                             </tbody>
                           </table>
+                          <?php echo LinkPager::widget([
+                    'pagination'=> $listBooking->pagination
+                    ]);
+                    ?>
                         </div>
                         <!-- /.table-responsive -->
                       </div>

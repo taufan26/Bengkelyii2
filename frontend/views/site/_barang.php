@@ -7,7 +7,7 @@ use yii\helpers\Html;
         <div class="single-products">
             <div class="productinfo text-center">
                 <img height="250px" src="../../backend/web/uploads/<?=$model->image?>"/>
-                <h2>RP <?=$model->harga?></h2>
+                <h2>Rp <?=Yii::$app->formatter->asDecimal($model->harga)?></h2>
                 <p><?=$model->nama?></p>
             </div>
         </div>

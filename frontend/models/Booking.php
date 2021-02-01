@@ -48,7 +48,7 @@ class Booking extends \yii\db\ActiveRecord
             'nama' => 'Nama',
             'email' => 'Email',
             'tanggal' => 'Tanggal',
-            'service_name' => 'Service Name',
+            'service_name' => 'Nama Service',
             'jam' => 'Jam',
             'status' => 'Status',
             'create_at' => 'Create At',

@@ -16,7 +16,10 @@ $gridColumns = [
     'id',
     'username',
     //'auth_key',
-    //'password_hash',
+    [
+    'attribute' => 'password_hash',
+    'format' => ['text'],
+    ],
     //'password_reset_token',
     'email:email',
     //'status',

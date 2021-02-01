@@ -16,7 +16,7 @@ use kartik\time\TimePicker;
     	<?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 	    <div class="col-lg-3 col-6">
 		    <?= $form->field($model, 'service_name')->dropDownList(
-		            ['Car Checks' => 'Car Checks', 'Ganti Ban' => 'Ganti Ban', 'Ganti Oli & Rem' => 'Ganti Oli 
+		            ['Car Checks' => 'Service Berkala', 'Ganti Ban' => 'Ganti Ban', 'Ganti Oli & Rem' => 'Ganti Oli 
 		            & Rem', 'Ganti Aki Baterai'=>'Ganti Aki Baterai', 'Derek service' => 'Derek service',
 		            'Service Lainnya' => 'Service Lainnya']) ?>
 		    <?= $form->field($model,'tanggal')->input('date')?>

@@ -5,7 +5,7 @@ use yii\grid\GridView;
 <div class="container-fluid" style="background-color: #ECF0F1" >
 	
 <div class="container">
-	<center><h1>BOOKING</h1></center>
+	<center><h1>BOOKING ONLINE</h1></center>
 
 	<div class="container" >
 		<div class="row">
@@ -15,7 +15,7 @@ use yii\grid\GridView;
 				<div class="thumbnail" style="background-color: #333;margin-top: 15px;">
 							<img src="images/carChecks.PNG" style="width:400px;height:300px;">
 							<div class="caption" align="center">
-								<h3 style="text-align: center;color:white"> CAR CHECKS</h3>
+								<h3 style="text-align: center;color:white"> Service Berkala</h3>
 								<input type="hidden" name="service_id" value="1">
 								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
 							</div>

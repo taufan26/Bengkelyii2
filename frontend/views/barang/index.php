@@ -28,7 +28,7 @@ $url=Url::to(['site/sparepart']);
                             <h2><?=$barang->deskripsi?></h2>
                             <p>Stock: <?=$barang->stock?></p>
                             <span>
-                                <span>RP <?=$barang->harga ?></span>
+                                <span>Rp <?=Yii::$app->formatter->asDecimal($barang->harga)?></span>
                             </span>
                             <p><b>QTY:</b> <?=$barang->quantity?></p>  
                             <p><b>Deskripsi:</b> <?=$barang->deskripsi?></p>

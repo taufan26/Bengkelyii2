@@ -23,6 +23,6 @@
 	?>
 	</td>
 	<td>
-	<div class="sparkbar" data-color="#00a65a" data-height="20"><?=Yii::$app->formatter->asDatetime($model->create_at)?></div>
+	<div class="sparkbar" data-color="#00a65a" data-height="20"><?=$model->create_at?></div>
 	</td>
 </tr>

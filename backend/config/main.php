@@ -83,7 +83,8 @@ return [
         'formatter' => [
             'dateFormat' => 'dd.MM.yyyy',
             'decimalSeparator' => ',',
-            'thousandSeparator' => ' ',
+            'thousandSeparator' => '.',
+            'timeFormat'=> 'H:i a',
             'timeZone' => 'Asia/Jakarta',
        ],
     ],

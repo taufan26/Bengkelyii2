@@ -20,7 +20,10 @@ $gridColumns = [
     'format' => ['date', 'd-M-Y'],
     ],
    'service_name',
-   'jam',
+   [
+   'attribute'=>'jam',
+   'format'=>['time','H:i a']
+   ],
    'status',
    'create_at',
 

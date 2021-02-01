@@ -48,7 +48,7 @@ class Booking extends \yii\db\ActiveRecord
             'nama' => 'Nama',
             'email' => 'Email',
             'tanggal' => 'Tanggal',
-            'service_name' => 'Service Name',
+            'service_name' => 'Nama Service',
             'jam' => 'Jam',
             'status' => 'Status',
             'create_at' => 'Create At',
@@ -65,5 +65,23 @@ class Booking extends \yii\db\ActiveRecord
     public function setTanggal($value)
     {
         $this->tanggal = Date('Y-m-d', strtotime($value));
+    }
+
+    public function getStatusText()
+    {
+
+        switch ($this->status){
+            case "Terkonfirmasi":
+                $text = "<span class=\"label label-success\">Di Konfirmasi</span>";
+                break;
+            case "Di Tolak":
+                $text = "<span class=\"label label-danger\">Di Tolak</span>";
+                break;
+            default:
+                $text = "<span class=\"label label-info\">Menunggu Konfirmasi</span>";
+
+        return $text;
+            }
+
     }
 }
