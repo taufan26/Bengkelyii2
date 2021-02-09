@@ -19,7 +19,7 @@ $url=Url::to(['site/sparepart']);
                 <div class="product-details"><!--product-details-->
                     <div class="col-sm-5">
                         <div class="view-product">
-                            <img src="../../backend/web/uploads/<?=$barang->image?>" alt="">
+                            <img src="/Bengkelyii2/admin/uploads/<?=$barang->image?>" alt="">
                         </div>
                     </div>
                     <div class="col-sm-7">

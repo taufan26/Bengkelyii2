@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="<?=\yii\helpers\Url::home()?>" class="brand-link">
-        <img src="uploads/images.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
+        <img src="<?=\yii\helpers\Url::to('@web/')?>uploads/images.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
         <span class="brand-text font-weight-light">Admin</span>
     </a>
 

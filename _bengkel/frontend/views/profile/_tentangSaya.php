@@ -4,7 +4,7 @@
               <div class="card-body box-profile">
                 <div class="text-center">
                   <img class="profile-user-img img-fluid img-circle"
-                       src="uploads/<?=$model->img_profile?>"
+                       src="/Bengkelyii2/uploads/<?=$model->img_profile?>"
                        alt="User profile picture"
                        width="155px"
                        height="155px">

@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = 'Service';
 $this->params['breadcrumbs'][] = $this->title;
@@ -17,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<div class="col-md-4">
 				<center>
 					<div style="height: 100px;">
-						<img src="images/dedicatedMechanics.png">
+						<img src="<?=Url::to('@web/')?>images/dedicatedMechanics.png">
 						<h3>MEKANIK BERDEDIKASI</h3>
 					</div>
 					<h4 style="margin-top: 100px;">Servis mobil berat bisa dilakukan<br> jika Anda membutuhkan. <br> Untuk itu kami mendedikasikan <br> mekanik untuk tugas Anda.</h4>
@@ -26,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<div class="col-md-4">
 				<center>
 					<div style="height: 100px;">
-						<img src="images/carChecks.png">
+						<img src="<?=Url::to('@web/')?>images/carChecks.png">
 						<h3>PERIKSA MOBIL</h3>
 					</div>
 					<h4 style="margin-top: 100px;">Jenis pemeriksaan mobil <br> yang Anda inginkan. <br>Kami juga akan menyediakannya.</h4>
@@ -35,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<div class="col-md-4">
 				<center>
 					<div style="height: 100px;">
-						<img src="images/oilAndBreakChecks.png">
+						<img src="<?=Url::to('@web/')?>images/oilAndBreakChecks.png">
 						<h3>OLI & PENGECEKAN REM</h3>
 					</div>
 					<h4 style="margin-top: 100px;">Oli mesin, Oli Kemudi, layanan rotasi ban <br> juga kami sediakan.</h4>
@@ -49,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<div class="col-md-4">
 				<center>
 					<div style="height: 100px;">
-						<img src="images/breakdownService.png">
+						<img src="<?=Url::to('@web/')?>images/breakdownService.png">
 						<h3>LAYANAN KERUSAKAN</h3>
 					</div>
 					<h4 style="margin-top: 100px;">Jika Anda terjebak di suatu tempat, Cukup hubungi <be> yang digunakan untuk layanan derek</h4>
@@ -60,7 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<div class="col-md-4">
 				<center>
 					<div style="height: 100px;">
-						<img src="images/tireChange.png">
+						<img src="<?=Url::to('@web/')?>images/tireChange.png">
 						<h3>PENGGANTIAN BAN</h3>
 					</div>
 					<h4 style="margin-top: 100px;">Kami juga menyediakan pergantian ban dan rotasi ban</h4>
@@ -71,7 +72,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<div class="col-md-4">
 				<center>
 					<div style="height: 100px;">
-						<img src="images/batteryChange.png">
+						<img src="<?=Url::to('@web/')?>images/batteryChange.png">
 						<h3>PENGGANTIAN AKI BATERAI</h3>
 					</div>
 					<h4 style="margin-top: 100px;">Kami menyediakan aki baterai berkualitas untuk pertukaran</h4>

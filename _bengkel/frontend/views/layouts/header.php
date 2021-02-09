@@ -8,7 +8,7 @@ use common\widgets\Alert;
 ?>
 <?php
 NavBar::begin([
-    'brandLabel' => '<img src="icon/favicon-16x16.png" class="pull-left"/>Bengkel Master',]
+    'brandLabel' => '<img src="../icon/favicon-16x16.png" class="pull-left"/>Bengkel Master',]
 );
 $menuItems = 
 [

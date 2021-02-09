@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value'     => function ($model)
                 {
                     $foto =$model->image;
-                    return "<img src='uploads/$foto' width='100'>"; 
+                    return "<img src='/Bengkelyii2/admin/uploads/$foto' width='100'>"; 
                 }
             ],
             'status',

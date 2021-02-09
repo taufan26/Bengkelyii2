@@ -3,9 +3,12 @@
 /* @var $this yii\web\View */
 
 $this->title = 'Bengkel Master';
+
+use yii\helpers\Url;
+
 ?>
 <div class="site-index" style="background-color: #FFFFFF">
-    <img src="images/banner-main-page.jpg" style="width: 1140px;height: 500px;">
+    <img src="<?=Url::to('@web/')?>images/banner-main-page.jpg" style="width: 1140px;height: 500px;">
     <div class="container-fluid">
         <div class="row" style="background-color: #B22222;color: white;">
             <div class="col-md-4">
@@ -41,7 +44,7 @@ $this->title = 'Bengkel Master';
                 </center>
             </div>
             <div class="col-md-5">
-                <a href="bookOnline.php"><img src="images/visitUsImage.png" style="width: 350px;height: 200px;">
+                <a href="#"><img src="<?=Url::to('@web/')?>images/visitUsImage.png" style="width: 350px;height: 200px;">
                 </a>
             </div>
         </div>
@@ -52,7 +55,7 @@ $this->title = 'Bengkel Master';
             <div class="row" style="margin-top: 50px;">
                 <div class="col-md-4">
                     <center>
-                        <img src="images/location1.png" style="width: 100px;height: 100px;">
+                        <img src="<?=Url::to('@web/')?>images/location1.png" style="width: 100px;height: 100px;">
                         <h3>SELALU BUKA <br> UNTUK ANDA</h3>
                         <br>
                         <h4>Kami di sini 24 jam untuk melayani Anda. Kami menyediakan layanan sesuai dengan kebutuhan Anda.</h4>
@@ -60,7 +63,7 @@ $this->title = 'Bengkel Master';
                 </div>
                 <div class="col-md-4">
                     <center>
-                        <img src="images/dolar.png" style="width: 100px;height: 100px;">
+                        <img src="<?=Url::to('@web/')?>images/dolar.png" style="width: 100px;height: 100px;">
                         <h3>HARGA <br>TAK TERKALAHKAN</h3>
                         <br>
                         <h4>Kami memberikan layanan terbaik dengan harga rendah terbaik. Harga tidak terkalahkan dibandingkan dengan bengkel mekanik lainnya</h4>
@@ -68,7 +71,7 @@ $this->title = 'Bengkel Master';
                 </div>
                 <div class="col-md-4">
                     <center>
-                        <img src="images/star.png" style="width: 100px;height: 100px;">
+                        <img src="<?=Url::to('@web/')?>images/star.png" style="width: 100px;height: 100px;">
                         <h3>SECARA PROFESIONAL <br> MEMENUHI SYARAT</h3>
                         <br>
                         <h4>Semua mekanik memiliki pengalaman yang baik dan mereka profesional di bidang itu. Mereka akan mengurus kebutuhan Anda dengan baik</h4>
