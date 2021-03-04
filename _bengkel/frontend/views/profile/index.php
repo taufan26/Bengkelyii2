@@ -1,13 +1,5 @@
 <?php
-
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
-use yii\helpers\Url;
 use yii\widgets\LinkPager;
-
-//use yii\web\View; 
-//use  frontend\models\Profile; 
-/* @var $form yii\widgets\ActiveForm */
 ?>
 
 
@@ -59,12 +51,12 @@ use yii\widgets\LinkPager;
                             </thead>
                             <tbody>
                               <?php
-                                  echo \yii\widgets\ListView::Widget([
-                                    'dataProvider'=>$listBooking,
-                                    'layout'=> "<div class\"items\">{items}</div>",
-                                    //'intemOptions'=>['class'=>'item'],
-                                    'itemView'=>'_bookingList',
-                                  ])
+                                echo \yii\widgets\ListView::Widget([
+                                  'dataProvider'=>$listBooking,
+                                  'layout'=> "<div class\"items\">{items}</div>",
+                                  //'intemOptions'=>['class'=>'item'],
+                                  'itemView'=>'_bookingList',
+                                ])
                               ?>
                             </tbody>
                           </table>
@@ -81,12 +73,12 @@ use yii\widgets\LinkPager;
                   <!-- /.tab-pane -->
                   <div class="tab-pane" id="settings">
                     <?php
-                                  echo \yii\widgets\ListView::Widget([
-                                    'dataProvider'=>$tentangSaya,
-                                    'layout'=> "<div class\"items\">{items}</div>",
-                                    //'intemOptions'=>['class'=>'item'],
-                                    'itemView'=>'_profile',
-                                  ])
+                      echo \yii\widgets\ListView::Widget([
+                        'dataProvider'=>$tentangSaya,
+                        'layout'=> "<div class\"items\">{items}</div>",
+                        //'intemOptions'=>['class'=>'item'],
+                        'itemView'=>'_profile',
+                      ])
                     ?>
                   </div>
                   <!-- /.tab-pane -->

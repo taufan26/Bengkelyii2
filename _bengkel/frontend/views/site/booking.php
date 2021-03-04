@@ -12,27 +12,41 @@ use yii\helpers\Url;
 	<div class="container" >
 		<div class="row">
 			<div class="col-md-3">
-			  <form action="serviceBookingHandler.php" method="post">
-							
-				<div class="thumbnail" style="background-color: #333;margin-top: 15px;">
-							<img src="<?=Url::to('@web/')?>images/carChecks.PNG" style="width:400px;height:300px;">
-							<div class="caption" align="center">
-								<h3 style="text-align: center;color:white"> Service Berkala</h3>
-								<input type="hidden" name="service_id" value="1">
-								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
-							</div>
-						
-				</div>
-			  </form>
-				
+			<div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+					<div style="text-align:center;">
+					<h4>Daftar Booking</h4>
+					</div>
+                    <tr>
+                      <th>Nama</th> 
+                      <th>Tanggal</th>
+                      <th>Jam</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                          echo \yii\widgets\ListView::Widget([
+                            'dataProvider'=>$bookingList,
+                            'layout'=> "<div class\"items\">{items}</div>",
+                            //'intemOptions'=>['class'=>'item'],
+                            'itemView'=>'_bookinglist',
+                          ])
+                      ?>  
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>				
 			</div>
 
 			
 			<div class="col-md-4">
-			  <form action="serviceBookingHandler.php" method="post">
+			  
 							
 				<div class="thumbnail" style="background-color: #333;margin-top: 15px;">
-							<img src="<?=Url::to('@web/')?>images/tire_change.PNG" style="width:400px;height:300px;">
+							<img src="<?=Url::to('@web/')?>images/tire_change.png" style="width:400px;height:300px;">
 							<div class="caption" align="center">
 								<h3 style="text-align: center;color:white"> Ganti Ban</h3>
 								<input type="hidden" name="service_id" value="2">

@@ -83,8 +83,6 @@ return [
             'dateFormat' => 'dd.MM.yyyy',
             'decimalSeparator' => ',',
             'thousandSeparator' => '.',
-            'timeFormat'=> 'H:i a',
-            'timeZone' => 'Asia/Jakarta',
        ],
     ],
     'params' => $params,

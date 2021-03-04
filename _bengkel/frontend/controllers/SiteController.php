@@ -25,6 +25,7 @@ use frontend\models\ContactForm;
 
 //backend model
 use backend\models\Barang;
+use backend\models\Booking;
 use common\models\Promo;
 //cart
 use \yz\shoppingcart\Shoppingcart;
@@ -169,7 +170,13 @@ use \yz\shoppingcart\Shoppingcart;
     }
     public function actionBooking()
     {
-        return $this->render('booking');
+        $bookingList = new ActiveDataProvider([
+            'query'=>Booking::find()
+            ->from(['booking'])
+            ->orderBy('create_at DESC'), 
+            'pagination'=>['pageSize'=>10,]
+        ]);
+        return $this->render('booking', ['bookingList'=>$bookingList,]);
     }
     public function actionSparepart()
     {
