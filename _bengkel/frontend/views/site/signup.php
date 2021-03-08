@@ -5,7 +5,7 @@
 /* @var $model \frontend\models\SignupForm */
 
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use kartik\form\ActiveForm;
 
 $this->title = 'Signup';
 $this->params['breadcrumbs'][] = $this->title;
@@ -17,16 +17,24 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
         <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+            <?php $form = ActiveForm::begin([
+                'id' => 'form-signup',
+                'type' => ActiveForm::TYPE_HORIZONTAL,
+                'formConfig' => ['labelSpan' => 3, 'deviceSize' => ActiveForm::SIZE_SMALL]
+            ]); ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'username')->textInput(['id' => 'username-cbx']) ?>
 
                 <?= $form->field($model, 'email') ?>
-
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
+                
+                <?= $form->field($model, 'password')->passwordInput(['id' => 'password-cbx']) ?>
+                
+                <div class="form-group row">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-9">
+                        <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
+                    </div>
                 </div>
 
             <?php ActiveForm::end(); ?>

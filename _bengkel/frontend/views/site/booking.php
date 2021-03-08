@@ -8,10 +8,9 @@ use yii\helpers\Url;
 	
 <div class="container">
 	<center><h1>BOOKING ONLINE</h1></center>
-
 	<div class="container" >
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-4">
 			<div class="card-body p-0">
                 <div class="table-responsive">
                   <table class="table m-0">
@@ -23,6 +22,7 @@ use yii\helpers\Url;
                       <th>Nama</th> 
                       <th>Tanggal</th>
                       <th>Jam</th>
+                      <th>Status</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -39,95 +39,59 @@ use yii\helpers\Url;
                 </div>
                 <!-- /.table-responsive -->
               </div>				
-			</div>
-
-			
-			<div class="col-md-4">
-			  
-							
+			</div>			
+			<div class="col-md-4">							
 				<div class="thumbnail" style="background-color: #333;margin-top: 15px;">
-							<img src="<?=Url::to('@web/')?>images/tire_change.png" style="width:400px;height:300px;">
-							<div class="caption" align="center">
-								<h3 style="text-align: center;color:white"> Ganti Ban</h3>
-								<input type="hidden" name="service_id" value="2">
-								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
-							</div>
-						
-				</div>
-			  </form>
-				
+					<img src="<?=Url::to('@web/')?>images/tire_change.png" style="width:400px;height:300px;">
+					<div class="caption" align="center">
+						<h3 style="text-align: center;color:white"> Ganti Ban</h3>
+						<input type="hidden" name="service_id" value="2">
+						<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-default add-to-cart'] ) ?>
+					</div>						
+				</div>				
 			</div>
-
-
-			<div class="col-md-4">
-			  <form action="serviceBookingHandler.php" method="post">
-							
+			<div class="col-md-3">							
 				<div class="thumbnail" style="background-color: #333;margin-top: 15px;">
-							<img src="<?=Url::to('@web/')?>images/oil_and_break_checks.png" style="width:400px;height:300px;">
-							<div class="caption" align="center">
-								<h3 style="text-align: center;color:white"> Ganti Oli & Rem</h3>
-								<input type="hidden" name="service_id" value="3">
-								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
-							</div>
-						
-				</div>
-			  </form>
-				
+					<img src="<?=Url::to('@web/')?>img/service.jpg" style="width:400px;height:300px;">
+					<div class="caption" align="center">
+						<h3 style="text-align: center;color:white">Servis Berkala</h3>
+						<input type="hidden" name="service_id" value="3">
+						<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-default add-to-cart']) ?>
+					</div>						
+				</div>				
 			</div>
 		</div>
-
 		<div class="row">
-			<div class="col-md-3">
-			  <form action="serviceBookingHandler.php" method="post">
-							
+			<div class="col-md-4">			
 				<div class="thumbnail" style="background-color: #333;margin-top: 15px;">
-							<img src="<?=Url::to('@web/')?>images/battery_change.png" style="width:400px;height:300px;">
-							<div class="caption" align="center">
-								<h3 style="text-align: center;color:white"> Ganti Aki Baterai</h3>
-								<input type="hidden" name="service_id" value="4">
-								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
-							</div>
-						
-				</div>
-			  </form>
-				
+					<img src="<?=Url::to('@web/')?>images/battery_change.png" style="width:400px;height:300px;">
+					<div class="caption" align="center">
+						<h3 style="text-align: center;color:white"> Ganti Aki Baterai</h3>
+						<input type="hidden" name="service_id" value="4">
+						<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-default add-to-cart']) ?>
+					</div>						
+				</div>				
+			</div>		
+			<div class="col-md-4">							
+				<div class="thumbnail" style="background-color: #333;margin-top: 15px;">
+					<img src="<?=Url::to('@web/')?>images/oil_and_break_checks.png" style="width:400px;height:300px;">
+					<div class="caption" align="center">
+						<h3 style="text-align: center;color:white">Ganti Oli & Rem</h3>
+						<input type="hidden" name="service_id" value="5">
+						<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-default add-to-cart']) ?>
+					</div>						
+				</div>				
 			</div>
-
-			
-			<div class="col-md-4">
-			  <form action="serviceBookingHandler.php" method="post">
-							
+			<div class="col-md-3">							
 				<div class="thumbnail" style="background-color: #333;margin-top: 15px;">
-							<img src="<?=Url::to('@web/')?>images/breakDownService.PNG" style="width:400px;height:300px;">
-							<div class="caption" align="center">
-								<h3 style="text-align: center;color:white"> Derek Servis</h3>
-								<input type="hidden" name="service_id" value="5">
-								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
-							</div>
-						
-				</div>
-			  </form>
-				
-			</div>
-
-
-			<div class="col-md-4">
-			  <form action="serviceBookingHandler.php" method="post">
-							
-				<div class="thumbnail" style="background-color: #333;margin-top: 15px;">
-							<img src="<?=Url::to('@web/')?>images/other_services.png" style="width:400px;height:300px;">
-							<div class="caption" align="center">
-								<h3 style="text-align: center;color:white"> Servis Lainnya</h3>
-								<input type="hidden" name="service_id" value="6">
-								<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-success']) ?>
-							</div>
-						
-				</div>
-			  </form>
-				
+					<img src="<?=Url::to('@web/')?>images/other_services.png" style="width:400px;height:300px;">
+					<div class="caption" align="center">
+						<h3 style="text-align: center;color:white"> Servis Lainnya</h3>
+						<input type="hidden" name="service_id" value="6">
+						<?= Html::a('Booking', ['booking/create'], ['class' => 'btn btn-default add-to-cart']) ?>
+					</div>						
+				</div>			
 			</div>
 		</div>
 	</div>
-
-	
 </div>

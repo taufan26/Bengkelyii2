@@ -219,4 +219,13 @@ return array (
       '@kartik/nav' => $vendorDir . '/kartik-v/yii2-nav-x/src',
     ),
   ),
+  'shiyang/yii2-login-widget' => 
+  array (
+    'name' => 'shiyang/yii2-login-widget',
+    'version' => '1.0.0.0',
+    'alias' => 
+    array (
+      '@shiyang/login' => $vendorDir . '/shiyang/yii2-login-widget',
+    ),
+  ),
 );
