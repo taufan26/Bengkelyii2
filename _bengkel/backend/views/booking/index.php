@@ -90,7 +90,11 @@ $gridColumns = [
                 ]
 
             ],
-        ],       
+        ],
+        'containerOptions' => ['style' => 'overflow: auto'], // only set when $responsive = false
+        'headerRowOptions' => ['class' => 'kartik-sheet-style'],
+        'filterRowOptions' => ['class' => 'kartik-sheet-style'],
+        'persistResize' => false,       
         'hover'=>true,
             'pager' => [
                 'options'=>['class'=>'pagination'],   // set clas name used in ui list of pagination
@@ -106,8 +110,8 @@ $gridColumns = [
             ],      
       'panel' => [
           'heading'=>'<h3 class="panel-title"><i class="fa fa-calendar-check "></i> Booking Service</h3>',
-          'type'=>'success',
-          'before'=>Html::a('<i class="fa fa-plus"></i> Create booking', ['create'], ['class' => 'btn btn-success'])         
+          'type'=>'primary',
+          'before'=>Html::a('<i class="fa fa-plus"></i> Create booking', ['create'], ['class' => 'btn btn-primary'])         
       ],
     ]); ?>
 

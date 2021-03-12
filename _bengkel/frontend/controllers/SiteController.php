@@ -140,7 +140,7 @@ use \yz\shoppingcart\Shoppingcart;
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 Yii::$app->session->setFlash('success',
-                 'Thank you for contacting us. We will respond to you as soon as possible.');
+                 'Terima kasih sudah menghubungi kami. Kami akan membalas Anda sesegera mungkin.');
             } else 
             {
                 Yii::$app->session->setFlash('error', 'There was an error sending your message.');
@@ -227,7 +227,7 @@ use \yz\shoppingcart\Shoppingcart;
     {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
-            Yii::$app->session->setFlash('success', 'Silakan Melengkapi Data Diri');
+            Yii::$app->session->setFlash('success', 'Silakan Cek Email untuk verify akun');
             return $this->goHome();
         }
 
@@ -246,7 +246,7 @@ use \yz\shoppingcart\Shoppingcart;
         $model = new PasswordResetRequestForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
-                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                Yii::$app->session->setFlash('success', 'Periksa email Anda untuk instruksi lebih lanjut.');
 
                 return $this->goHome();
             } else {
@@ -276,7 +276,7 @@ use \yz\shoppingcart\Shoppingcart;
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
-            Yii::$app->session->setFlash('success', 'New password saved.');
+            Yii::$app->session->setFlash('success', 'Password Baru Telah Di simpan.');
 
             return $this->goHome();
         }
@@ -302,7 +302,7 @@ use \yz\shoppingcart\Shoppingcart;
         }
         if ($user = $model->verifyEmail()) {
             if (Yii::$app->user->login($user)) {
-                Yii::$app->session->setFlash('success', 'Your email has been confirmed!');
+                Yii::$app->session->setFlash('success', 'Email Anda telah dikonfirmasi!');
                 return $this->goHome();
             }
         }
@@ -323,7 +323,7 @@ use \yz\shoppingcart\Shoppingcart;
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
                 Yii::$app->session->setFlash('success',
-                'Check your email for further instructions.');
+                'Periksa email Anda untuk instruksi lebih lanjut.');
                 return $this->goHome();
             }
             Yii::$app->session->setFlash('error',

@@ -26,7 +26,7 @@ $uurl = Url::to(['user/index']);
                 <p>Jumlah Booking</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-checkmark-round"></i>
               </div>
               <a href="<?=$url?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -40,7 +40,7 @@ $uurl = Url::to(['user/index']);
                 <p>Jumlah Sparepart</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-wrench"></i>
               </div>
               <a href="<?=$surl?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -48,14 +48,14 @@ $uurl = Url::to(['user/index']);
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3><?=$mail['mal']?></h3>
 
                 <p>Complaint & Feedback</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-email"></i>
               </div>
               <a href="<?=$feedback?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>

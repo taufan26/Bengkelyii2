@@ -29,7 +29,11 @@ $gridColumns = [
         'dataProvider'=> $dataProvider,
         'filterModel' => $searchModel,
         'columns' => $gridColumns,
-        'resizableColumns'=>true,
+        'resizableColumns'=>true,  
+        'containerOptions' => ['style' => 'overflow: auto'], // only set when $responsive = false
+        'headerRowOptions' => ['class' => 'kartik-sheet-style'],
+        'filterRowOptions' => ['class' => 'kartik-sheet-style'],
+        'persistResize' => false,    
         'exportConfig'=> [
             GridView::EXCEL => [
                 'label' => Yii::t('app', 'Excel'),
@@ -98,7 +102,7 @@ $gridColumns = [
             ],      
       'panel' => [
           'heading'=>'<h3 class="panel-title"><i class="fa fa-address-book "></i> Contact</h3>',
-          'type'=>'success',
+          'type'=>'primary',
       ],
     ]); ?>
 

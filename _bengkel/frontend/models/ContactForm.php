@@ -60,8 +60,7 @@ class ContactForm extends ActiveRecord
 
         return Yii::$app->mailer->compose()
             ->setTo($email)
-            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-            ->setReplyTo([$this->email => $this->name])
+            ->setFrom([$this->email => $this->name])
             ->setSubject($this->subject)
             ->setTextBody($this->body)
             ->send();

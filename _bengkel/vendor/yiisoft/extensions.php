@@ -228,4 +228,22 @@ return array (
       '@shiyang/login' => $vendorDir . '/shiyang/yii2-login-widget',
     ),
   ),
+  'sammaye/yii2-audittrail' => 
+  array (
+    'name' => 'sammaye/yii2-audittrail',
+    'version' => '1.3.0.0',
+    'alias' => 
+    array (
+      '@sammaye/audittrail' => $vendorDir . '/sammaye/yii2-audittrail',
+    ),
+  ),
+  'kartik-v/yii2-date-range' => 
+  array (
+    'name' => 'kartik-v/yii2-date-range',
+    'version' => 'dev-master',
+    'alias' => 
+    array (
+      '@kartik/daterange' => $vendorDir . '/kartik-v/yii2-date-range/src',
+    ),
+  ),
 );

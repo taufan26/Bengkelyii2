@@ -18,6 +18,7 @@ return array(
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'shiyang\\login\\' => array($vendorDir . '/shiyang/yii2-login-widget'),
     'setasign\\Fpdi\\' => array($vendorDir . '/setasign/fpdi/src'),
+    'sammaye\\audittrail\\' => array($vendorDir . '/sammaye/yii2-audittrail'),
     'rmrevin\\yii\\fontawesome\\' => array($vendorDir . '/rmrevin/yii2-fontawesome'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'kartik\\sortable\\' => array($vendorDir . '/kartik-v/yii2-sortable/src'),
@@ -32,6 +33,7 @@ return array(
     'kartik\\dynagrid\\' => array($vendorDir . '/kartik-v/yii2-dynagrid/src'),
     'kartik\\dropdown\\' => array($vendorDir . '/kartik-v/yii2-dropdown-x'),
     'kartik\\dialog\\' => array($vendorDir . '/kartik-v/yii2-dialog/src'),
+    'kartik\\daterange\\' => array($vendorDir . '/kartik-v/yii2-date-range/src'),
     'kartik\\date\\' => array($vendorDir . '/kartik-v/yii2-widget-datepicker/src'),
     'kartik\\bs4dropdown\\' => array($vendorDir . '/kartik-v/yii2-bootstrap4-dropdown/src'),
     'kartik\\base\\' => array($vendorDir . '/kartik-v/yii2-krajee-base/src'),
@@ -79,5 +81,5 @@ return array(
     'Complex\\' => array($vendorDir . '/markbaker/complex/classes/src'),
     'Codeception\\PHPUnit\\' => array($vendorDir . '/codeception/phpunit-wrapper/src'),
     'Codeception\\Extension\\' => array($vendorDir . '/codeception/codeception/ext'),
-    'Codeception\\' => array($vendorDir . '/codeception/stub/src', $vendorDir . '/codeception/verify/src/Codeception', $vendorDir . '/codeception/codeception/src/Codeception'),
+    'Codeception\\' => array($vendorDir . '/codeception/codeception/src/Codeception', $vendorDir . '/codeception/stub/src', $vendorDir . '/codeception/verify/src/Codeception'),
 );

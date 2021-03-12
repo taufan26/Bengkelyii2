@@ -21,7 +21,7 @@ $gridbarang = [
     [
         'attribute'=>'harga',
         'format'=>['decimal']
-        ],
+    ],
     'stock',
     'merek',
     'model',
@@ -101,7 +101,12 @@ $gridbarang = [
                 ]
 
             ],
-        ],         
+        ],
+        'containerOptions' => ['style' => 'overflow: auto'], // only set when $responsive = false
+        'headerRowOptions' => ['class' => 'kartik-sheet-style'],
+        'filterRowOptions' => ['class' => 'kartik-sheet-style'],
+        'persistResize' => false,
+        //'toggleDataOptions' => ['minCount' => 100],         
         'hover'=>true,
             'pager' => [
                 'options'=>['class'=>'pagination'],   // set clas name used in ui list of pagination
@@ -117,8 +122,8 @@ $gridbarang = [
             ],      
       'panel' => [
           'heading'=>'<h3 class="panel-title"><i class="fa fa-wrench"></i> Sparepart</h3>',
-          'type'=>'success',
-          'before'=>Html::a('<i class="fa fa-plus"></i> Create barang', ['create'], ['class' => 'btn btn-success'])         
+          'type' => GridView::TYPE_PRIMARY,
+          'before'=>Html::a('<i class="fa fa-plus"></i> Tambah barang', ['create'], ['class' => 'btn btn-primary'])         
       ],
     ]); ?>
 

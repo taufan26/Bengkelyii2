@@ -2,7 +2,7 @@
 return [
     'bsDependencyEnabled' => false,
     'bsVersion' => '4.x', 
-    'adminEmail' => 'admin@example.com',
+    'adminEmail' => 'gssshop07@gmail.com',
     'hail812/yii2-adminlte3' => [
         'pluginMap' => [
             'sweetalert2' => [

@@ -25,7 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= $form->field($model, 'username')->textInput(['id' => 'username-cbx']) ?>
                 <?= $form->field($model, 'password')->passwordInput(['id' => 'password-cbx']) ?>
                 <?= $form->field($model, 'rememberMe')->checkbox() ?>           
-                    <?= Html::a('Lupa Password?', ['site/request-password-reset']) ?>.
+                    <?= Html::a('Klik disi Jika anda Lupa Password.', ['site/request-password-reset']) ?><br>
+                    <?= Html::a('Klik disi Jika anda belum verifikasi akun.', ['site/resend-verification-email']) ?>
                 <div class="form-group row">
                     <div class="col-sm-3">
                     </div>

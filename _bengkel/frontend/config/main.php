@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
+    'name' => 'BengkelMaster',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
@@ -31,6 +32,10 @@ return [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
                 ],
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'categories' => ['yii\swiftmailer\Logger::add'],
+                ],
             ],
         ],
         'errorHandler' => [
@@ -50,17 +55,16 @@ return [
                     ],
             ],
         ],
-        
-        'cart' => [
-            'class' => 'yz\shoppingcart\ShoppingCart',
-            'cartId' => 'my_application_cart',
-        ],
         'formatter' => [
             'dateFormat' => 'dd.MM.yyyy',
             'decimalSeparator' => ',',
             'thousandSeparator' => '.',
             'currencyCode' => 'IND',
        ],
+       'mailer' => [
+        'class' => 'yii\swiftmailer\Mailer',
+        'enableSwiftMailerLogging' => true,
+        ],
     ],
     'params' => $params,
 ];
