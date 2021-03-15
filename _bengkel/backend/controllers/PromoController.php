@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\Promo;
 use backend\models\PromoSearch;
+use cakebake\actionlog\model\ActionLog;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -73,6 +74,7 @@ class PromoController extends Controller
         $model = new Promo();
 
         if ($model->load(Yii::$app->request->post())) {
+            ActionLog::add('success Insert', Yii::$app->user->identity->username);
 
             $imageFile = UploadedFile::getInstance($model,'img');
             if (isset($imageFile->size)) {
@@ -100,6 +102,7 @@ class PromoController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
+            ActionLog::add('success Update', Yii::$app->user->identity->username);
             $imageupdate = UploadedFile::getInstance($model,'img');
             if (isset($imageupdate->size)) {
                 $imageupdate->saveAs('uploads/'.$imageupdate->baseName.'.'.$imageupdate->extension);
@@ -123,6 +126,7 @@ class PromoController extends Controller
      */
     public function actionDelete($id)
     {
+        ActionLog::add('success Delete', Yii::$app->user->identity->username);
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

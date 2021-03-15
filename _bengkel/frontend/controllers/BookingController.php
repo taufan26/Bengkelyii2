@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use cakebake\actionlog\model\ActionLog;
 use Yii;
 use frontend\models\Booking;
 use frontend\models\BookingSearch;
@@ -68,6 +69,7 @@ class BookingController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
 
+            ActionLog::add('success Insert', Yii::$app->user->identity->username);
             $model->email = Yii::$app->user->identity->email;
             $model->nama= Yii::$app->user->identity->username;
             $model->save(false);
@@ -92,6 +94,7 @@ class BookingController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            ActionLog::add('success Update', Yii::$app->user->identity->username);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -109,6 +112,7 @@ class BookingController extends Controller
      */
     public function actionDelete($id)
     {
+        ActionLog::add('success Delete', Yii::$app->user->identity->username);
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

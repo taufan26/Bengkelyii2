@@ -16,7 +16,7 @@ use yii\helpers\Html;
             <a href="#" class="nav-link">Contact</a>
         </li> -->
         <li>
-            <?= Html::a('Sign out', ['site/logout'], ['data-method' => 'post', 'class' => 'dropdown-item']) ?>
+            <?= Html::a('Sign out', ['/site/logout'], ['data-method' => 'post', 'class' => 'dropdown-item']) ?>
         </li>
     </ul>
 

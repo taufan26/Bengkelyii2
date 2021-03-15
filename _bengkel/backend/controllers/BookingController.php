@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use backend\models\Booking;
 use backend\models\BookingSearch;
+use cakebake\actionlog\model\ActionLog;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -70,6 +71,7 @@ class BookingController extends Controller
         $model = new Booking();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            ActionLog::add('success Insert', Yii::$app->user->identity->username);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -90,6 +92,7 @@ class BookingController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            ActionLog::add('success Update', Yii::$app->user->identity->username);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -107,6 +110,7 @@ class BookingController extends Controller
      */
     public function actionDelete($id)
     {
+        ActionLog::add('success Delete', Yii::$app->user->identity->username);
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -144,6 +148,7 @@ class BookingController extends Controller
          $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            ActionLog::add('success Insert', Yii::$app->user->identity->username);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

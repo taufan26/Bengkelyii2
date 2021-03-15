@@ -12,6 +12,9 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
+        'actionlog' => [
+            'class' => 'cakebake\actionlog\Module',
+        ],
         'gridview' => ['class' => 'kartik\grid\Module'],
     ],
     'components' => [
@@ -46,14 +49,6 @@ return [
             'rules' => [
             ],
         ],
-        // 'view' => [
-        //      'theme' => [
-        //          'pathMap' => [
-        //             '@app/views' => '@vendor/hail812/yii2-adminlte3/src/views'
-        //          ],
-        //      ],
-        // ],
-
         'assetManager' => [
             'bundles' => [
                 'kartik\form\ActiveFormAsset' => [

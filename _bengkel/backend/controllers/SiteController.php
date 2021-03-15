@@ -8,6 +8,7 @@ use yii\filters\AccessControl;
 use common\models\AdminLoginForm;
 use backend\models\Booking;
 use backend\models\Barang;
+use cakebake\actionlog\model\ActionLog;
 use yii\data\ActiveDataProvider;
 
 /**
@@ -111,6 +112,7 @@ class SiteController extends Controller
 
         $model = new AdminLoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            ActionLog::add('success Login', Yii::$app->user->identity->username);
             return $this->goBack();
         } else {
             $model->password = '';
@@ -128,6 +130,7 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
+        ActionLog::add('success Logout', Yii::$app->user->identity->username);
         Yii::$app->user->logout();
 
         return $this->goHome();

@@ -39,6 +39,7 @@ return array(
     'kartik\\base\\' => array($vendorDir . '/kartik-v/yii2-krajee-base/src'),
     'hail812\\adminlte3\\' => array($vendorDir . '/hail812/yii2-adminlte3/src'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
+    'cakebake\\actionlog\\' => array($vendorDir . '/cakebake/yii2-actionlog'),
     'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),

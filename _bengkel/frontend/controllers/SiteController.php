@@ -26,9 +26,11 @@ use frontend\models\ContactForm;
 //backend model
 use backend\models\Barang;
 use backend\models\Booking;
+use cakebake\actionlog\model\ActionLog;
 use common\models\Promo;
 //cart
 use \yz\shoppingcart\Shoppingcart;
+
 
 /**
  * Site controller
@@ -107,6 +109,7 @@ use \yz\shoppingcart\Shoppingcart;
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            ActionLog::add('success Login', Yii::$app->user->identity->username);
             return $this->goBack();
         } else {
             $model->password = '';
@@ -124,6 +127,7 @@ use \yz\shoppingcart\Shoppingcart;
      */
     public function actionLogout()
     {
+        ActionLog::add('success Logout', Yii::$app->user->identity->username);
         Yii::$app->user->logout();
 
         return $this->goHome();

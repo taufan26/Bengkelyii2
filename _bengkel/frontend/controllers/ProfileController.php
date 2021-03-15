@@ -11,6 +11,7 @@ use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 use yii\data\ActiveDataProvider;
 use backend\models\Booking;
+use cakebake\actionlog\model\ActionLog;
 
 /**
  * ProfileController implements the CRUD actions for Profile model.
@@ -87,7 +88,7 @@ class ProfileController extends Controller
         $model = new Profile();
 
         if ($model->load(Yii::$app->request->post())) {
-
+            ActionLog::add('success Insert', Yii::$app->user->identity->username);
             $imageFile = UploadedFile::getInstance($model,'img_profile');
             if (isset($imageFile->size)) {
                 $imageFile->saveAs('uploads/'.$imageFile->baseName.'.'.$imageFile->extension);
@@ -116,6 +117,7 @@ class ProfileController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
+            ActionLog::add('success Update', Yii::$app->user->identity->username);
             $imageUpdate = UploadedFile::getInstance($model,'img_profile');
             if (isset($imageUpdate->size)) {
                 $imageUpdate->saveAs('uploads/'.$imageUpdate->baseName.'.'.$imageUpdate->extension);
@@ -139,6 +141,7 @@ class ProfileController extends Controller
      */
     public function actionDelete($id)
     {
+        ActionLog::add('success Delete', Yii::$app->user->identity->username);
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

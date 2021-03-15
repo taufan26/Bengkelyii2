@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '70d0dd9ae012f347570061e91c2a9beb616aaa74',
+    'reference' => 'b376e5715bd65603b064bac45bec86e42afbaa5e',
     'name' => 'yiisoft/yii2-app-advanced',
   ),
   'versions' => 
@@ -105,6 +105,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'aef7b953107264f00234902a3880eb50dafc48be',
+    ),
+    'cakebake/yii2-actionlog' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2f7eb5ac2683fb33ec248291db6454840b18e70d',
     ),
     'cebe/markdown' => 
     array (
@@ -216,12 +225,12 @@ private static $installed = array (
     ),
     'egulias/email-validator' => 
     array (
-      'pretty_version' => '2.1.25',
-      'version' => '2.1.25.0',
+      'pretty_version' => '3.1.0',
+      'version' => '3.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
+      'reference' => '62c3b73c581c834885acf6e120b412b76acc495a',
     ),
     'ezyang/htmlpurifier' => 
     array (
@@ -331,7 +340,7 @@ private static $installed = array (
       array (
         0 => '1.4.x-dev',
       ),
-      'reference' => '6e98876524f10e0a487977dd8a95279e5d24bc90',
+      'reference' => '7c0a391da5342e5a23039c14691db942611cc6f1',
     ),
     'kartik-v/yii2-grid' => 
     array (
@@ -887,12 +896,12 @@ private static $installed = array (
     ),
     'swiftmailer/swiftmailer' => 
     array (
-      'pretty_version' => 'v6.2.6',
-      'version' => '6.2.6.0',
+      'pretty_version' => 'v6.2.7',
+      'version' => '6.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd2791ff0b73247cdc2096b14f5580aba40c12bff',
+      'reference' => '15f7faf8508e04471f666633addacf54c0ab5933',
     ),
     'symfony/browser-kit' => 
     array (
@@ -905,12 +914,12 @@ private static $installed = array (
     ),
     'symfony/console' => 
     array (
-      'pretty_version' => 'v5.2.4',
-      'version' => '5.2.4.0',
+      'pretty_version' => 'v5.2.5',
+      'version' => '5.2.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd6d0cc30d8c0fda4e7b213c20509b0159a8f4556',
+      'reference' => '938ebbadae1b0a9c9d1ec313f87f9708609f1b79',
     ),
     'symfony/css-selector' => 
     array (
@@ -1074,12 +1083,12 @@ private static $installed = array (
     ),
     'symfony/yaml' => 
     array (
-      'pretty_version' => 'v5.2.4',
-      'version' => '5.2.4.0',
+      'pretty_version' => 'v5.2.5',
+      'version' => '5.2.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7d6ae0cce3c33965af681a4355f1c4de326ed277',
+      'reference' => '298a08ddda623485208506fcee08817807a251dd',
     ),
     'theseer/tokenizer' => 
     array (
@@ -1092,12 +1101,12 @@ private static $installed = array (
     ),
     'webmozart/assert' => 
     array (
-      'pretty_version' => '1.9.1',
-      'version' => '1.9.1.0',
+      'pretty_version' => '1.10.0',
+      'version' => '1.10.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'bafc69caeb4d49c39fd0779086c03a3738cbb389',
+      'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
     ),
     'yiisoft/yii2' => 
     array (
@@ -1115,7 +1124,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '70d0dd9ae012f347570061e91c2a9beb616aaa74',
+      'reference' => 'b376e5715bd65603b064bac45bec86e42afbaa5e',
     ),
     'yiisoft/yii2-bootstrap' => 
     array (

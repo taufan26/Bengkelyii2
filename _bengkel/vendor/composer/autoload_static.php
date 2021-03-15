@@ -139,6 +139,7 @@ class ComposerStaticInit740e3ab5bce89eee2fdac378d13127ee
         'c' => 
         array (
             'cebe\\markdown\\' => 14,
+            'cakebake\\actionlog\\' => 19,
         ),
         'Z' => 
         array (
@@ -352,6 +353,10 @@ class ComposerStaticInit740e3ab5bce89eee2fdac378d13127ee
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
+        ),
+        'cakebake\\actionlog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cakebake/yii2-actionlog',
         ),
         'ZipStream\\' => 
         array (

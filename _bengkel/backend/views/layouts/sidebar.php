@@ -52,7 +52,7 @@
                             ['label' => 'Laporan Sparepart', 'url' => ['/laporan/barang'],'icon'=> 'file'],
                         ]
                     ],
-                    ['label' => 'Log', 'iconStyle' => 'fa','url' => ['/log/index'], 'icon'=>'history'],
+                    ['label' => 'Log', 'iconStyle' => 'fa','url' => ['/actionlog/log/index'], 'icon'=>'history'],
                     ['label' => 'Yii2 PROVIDED', 'header' => true],
                     ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],
                     ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
